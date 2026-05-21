@@ -43,9 +43,9 @@ public class ItemVo implements Serializable {
     private String itemCategory;
 
     /**
-     * 单位类别
+     * 计量单位
      */
-    @ExcelProperty(value = "单位类别")
+    @ExcelProperty(value = "计量单位")
     private String unit;
 
     /**
@@ -53,6 +53,30 @@ public class ItemVo implements Serializable {
      */
     @ExcelProperty(value = "品牌")
     private Long itemBrand;
+
+    /**
+     * 茶类
+     */
+    @ExcelProperty(value = "茶类")
+    private String teaType;
+
+    /**
+     * 产区
+     */
+    @ExcelProperty(value = "产区")
+    private String teaOrigin;
+
+    /**
+     * 等级
+     */
+    @ExcelProperty(value = "等级")
+    private String teaLevel;
+
+    /**
+     * 采摘季
+     */
+    @ExcelProperty(value = "采摘季")
+    private String harvestSeason;
 
     /**
      * 备注

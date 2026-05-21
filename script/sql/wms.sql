@@ -174,31 +174,46 @@ INSERT INTO `sys_dict_data` VALUES (26, 9, '清空数据', '9', 'sys_oper_type',
 INSERT INTO `sys_dict_data` VALUES (27, 1, '失败', '0', 'sys_common_status', '', 'danger', 'N', '1', 'admin', '2024-06-13 16:06:37', 'admin', '2024-07-15 10:50:52', '正常状态');
 INSERT INTO `sys_dict_data` VALUES (28, 2, '成功', '1', 'sys_common_status', '', 'success', 'N', '1', 'admin', '2024-06-13 16:06:37', 'admin', '2024-07-15 10:51:05', '停用状态');
 INSERT INTO `sys_dict_data` VALUES (29, 99, '其他', '0', 'sys_oper_type', '', 'info', 'N', '1', 'admin', '2024-06-13 16:06:36', '', NULL, '其他操作');
-INSERT INTO `sys_dict_data` VALUES (1812692503272718338, 0, '客户', '1', 'merchant_type', NULL, 'default', 'N', '1', 'admin', '2024-07-15 11:35:46', 'admin', '2024-07-16 11:21:11', NULL);
-INSERT INTO `sys_dict_data` VALUES (1812694839395135489, 1, '供应商', '2', 'merchant_type', NULL, 'default', 'N', '1', 'admin', '2024-07-15 11:45:03', 'admin', '2024-07-16 11:21:29', '');
-INSERT INTO `sys_dict_data` VALUES (1813051377282904066, 3, '客户/供应商', '3', 'merchant_type', NULL, 'default', 'N', '1', 'admin', '2024-07-16 11:21:48', 'admin', '2024-07-16 11:21:48', NULL);
-INSERT INTO `sys_dict_data` VALUES (1813153852862160897, 0, '未入库', '0', 'wms_receipt_status', NULL, 'info', 'N', '1', 'admin', '2024-07-16 18:09:00', 'admin', '2024-07-22 09:38:14', NULL);
-INSERT INTO `sys_dict_data` VALUES (1813153899775451137, 1, '已入库', '1', 'wms_receipt_status', NULL, 'primary', 'N', '1', 'admin', '2024-07-16 18:09:11', 'admin', '2024-07-22 09:38:22', NULL);
+INSERT INTO `sys_dict_data` VALUES (1812692503272718338, 0, '采购方', '1', 'merchant_type', NULL, 'default', 'N', '1', 'admin', '2024-07-15 11:35:46', 'admin', '2024-07-16 11:21:11', '茶企采购方');
+INSERT INTO `sys_dict_data` VALUES (1812694839395135489, 1, '供应方', '2', 'merchant_type', NULL, 'default', 'N', '1', 'admin', '2024-07-15 11:45:03', 'admin', '2024-07-16 11:21:29', '茶企供应方');
+INSERT INTO `sys_dict_data` VALUES (1813051377282904066, 2, '经销方', '3', 'merchant_type', NULL, 'default', 'N', '1', 'admin', '2024-07-16 11:21:48', 'admin', '2024-07-16 11:21:48', '茶企经销方');
+INSERT INTO `sys_dict_data` VALUES (1813153852862160897, 0, '待入仓', '0', 'wms_receipt_status', NULL, 'info', 'N', '1', 'admin', '2024-07-16 18:09:00', 'admin', '2024-07-22 09:38:14', NULL);
+INSERT INTO `sys_dict_data` VALUES (1813153899775451137, 1, '已入仓', '1', 'wms_receipt_status', NULL, 'primary', 'N', '1', 'admin', '2024-07-16 18:09:11', 'admin', '2024-07-22 09:38:22', NULL);
 INSERT INTO `sys_dict_data` VALUES (1813397339171905537, 3, '作废', '-1', 'wms_receipt_status', NULL, 'danger', 'N', '1', 'admin', '2024-07-17 10:16:32', 'admin', '2024-07-22 09:38:29', NULL);
-INSERT INTO `sys_dict_data` VALUES (1814219171351085057, 0, '生产入库', '1', 'wms_receipt_type', NULL, 'primary', 'N', '1', 'admin', '2024-07-19 16:42:12', 'admin', '2024-07-22 09:38:50', NULL);
-INSERT INTO `sys_dict_data` VALUES (1814219220520910849, 1, '采购入库', '2', 'wms_receipt_type', NULL, 'primary', 'N', '1', 'admin', '2024-07-19 16:42:23', 'admin', '2024-07-22 09:38:56', NULL);
-INSERT INTO `sys_dict_data` VALUES (1814219269975949313, 2, '退货入库', '3', 'wms_receipt_type', NULL, 'primary', 'N', '1', 'admin', '2024-07-19 16:42:35', 'admin', '2024-07-22 09:39:01', NULL);
-INSERT INTO `sys_dict_data` VALUES (1814219304272773121, 3, '归还入库', '4', 'wms_receipt_type', NULL, 'primary', 'N', '1', 'admin', '2024-07-19 16:42:43', 'admin', '2024-07-22 09:39:06', NULL);
+INSERT INTO `sys_dict_data` VALUES (1814219171351085057, 0, '春茶采购入仓', '1', 'wms_receipt_type', NULL, 'primary', 'N', '1', 'admin', '2024-07-19 16:42:12', 'admin', '2024-07-22 09:38:50', NULL);
+INSERT INTO `sys_dict_data` VALUES (1814219220520910849, 1, '秋茶采购入仓', '2', 'wms_receipt_type', NULL, 'primary', 'N', '1', 'admin', '2024-07-19 16:42:23', 'admin', '2024-07-22 09:38:56', NULL);
+INSERT INTO `sys_dict_data` VALUES (1814219269975949313, 2, '退货回仓', '3', 'wms_receipt_type', NULL, 'warning', 'N', '1', 'admin', '2024-07-19 16:42:35', 'admin', '2024-07-22 09:39:01', NULL);
+INSERT INTO `sys_dict_data` VALUES (1814219304272773121, 3, '寄样回仓', '4', 'wms_receipt_type', NULL, 'success', 'N', '1', 'admin', '2024-07-19 16:42:43', 'admin', '2024-07-22 09:39:06', NULL);
 INSERT INTO `sys_dict_data` VALUES (1818850397680640002, 2, '作废', '-1', 'wms_shipment_status', NULL, 'danger', 'N', '1', 'admin', '2024-08-01 11:25:02', 'admin', '2024-08-01 14:25:24', NULL);
-INSERT INTO `sys_dict_data` VALUES (1818850512650706945, 0, '未出库', '0', 'wms_shipment_status', NULL, 'info', 'N', '1', 'admin', '2024-08-01 11:25:29', 'admin', '2024-08-01 14:25:37', NULL);
-INSERT INTO `sys_dict_data` VALUES (1818850565389885441, 1, '已出库', '1', 'wms_shipment_status', NULL, 'primary', 'N', '1', 'admin', '2024-08-01 11:25:42', 'admin', '2024-08-01 14:25:32', NULL);
-INSERT INTO `sys_dict_data` VALUES (1818850814351187969, 0, '退货出库', '1', 'wms_shipment_type', NULL, 'primary', 'N', '1', 'admin', '2024-08-01 11:26:41', 'wms2_admin', '2024-09-25 18:45:02', NULL);
-INSERT INTO `sys_dict_data` VALUES (1818850852594851841, 1, '销售出库', '2', 'wms_shipment_type', NULL, 'primary', 'N', '1', 'admin', '2024-08-01 11:26:51', 'wms2_admin', '2024-09-25 18:45:13', NULL);
-INSERT INTO `sys_dict_data` VALUES (1818850884714831874, 2, '生产出库', '3', 'wms_shipment_type', NULL, 'primary', 'N', '1', 'admin', '2024-08-01 11:26:58', 'wms2_admin', '2024-09-25 18:45:23', NULL);
-INSERT INTO `sys_dict_data` VALUES (1821067084643434498, 0, '入库', '1', 'wms_inventory_history_type', NULL, 'success', 'N', '1', 'admin', '2024-08-07 14:13:21', 'wms2_admin', '2024-09-27 10:53:49', NULL);
-INSERT INTO `sys_dict_data` VALUES (1821067144441626625, 1, '出库', '2', 'wms_inventory_history_type', NULL, 'danger', 'N', '1', 'admin', '2024-08-07 14:13:36', 'wms2_admin', '2024-09-27 10:53:39', NULL);
-INSERT INTO `sys_dict_data` VALUES (1821067181917732866, 2, '移库', '3', 'wms_inventory_history_type', NULL, 'warning', 'N', '1', 'admin', '2024-08-07 14:13:45', 'wms2_admin', '2024-09-27 10:54:01', NULL);
-INSERT INTO `sys_dict_data` VALUES (1821067222455681026, 3, '盘库', '4', 'wms_inventory_history_type', NULL, 'primary', 'N', '1', 'admin', '2024-08-07 14:13:54', 'admin', '2024-08-07 14:58:06', NULL);
-INSERT INTO `sys_dict_data` VALUES (1822820748966006786, 0, '未移库', '0', 'wms_movement_status', NULL, 'info', 'N', '1', 'admin', '2024-08-12 10:21:48', 'admin', '2024-08-12 10:21:48', NULL);
-INSERT INTO `sys_dict_data` VALUES (1822820794864275457, 1, '已移库', '1', 'wms_movement_status', NULL, 'primary', 'N', '1', 'admin', '2024-08-12 10:21:59', 'admin', '2024-08-12 10:21:59', NULL);
+INSERT INTO `sys_dict_data` VALUES (1818850512650706945, 0, '待出仓', '0', 'wms_shipment_status', NULL, 'info', 'N', '1', 'admin', '2024-08-01 11:25:29', 'admin', '2024-08-01 14:25:37', NULL);
+INSERT INTO `sys_dict_data` VALUES (1818850565389885441, 1, '已出仓', '1', 'wms_shipment_status', NULL, 'primary', 'N', '1', 'admin', '2024-08-01 11:25:42', 'admin', '2024-08-01 14:25:32', NULL);
+INSERT INTO `sys_dict_data` VALUES (1818850814351187969, 0, '渠道销售出仓', '1', 'wms_shipment_type', NULL, 'primary', 'N', '1', 'admin', '2024-08-01 11:26:41', 'admin', '2024-09-25 18:45:02', NULL);
+INSERT INTO `sys_dict_data` VALUES (1818850852594851841, 1, '电商零售出仓', '2', 'wms_shipment_type', NULL, 'primary', 'N', '1', 'admin', '2024-08-01 11:26:51', 'admin', '2024-09-25 18:45:13', NULL);
+INSERT INTO `sys_dict_data` VALUES (1818850884714831874, 2, '样品出仓', '3', 'wms_shipment_type', NULL, 'warning', 'N', '1', 'admin', '2024-08-01 11:26:58', 'admin', '2024-09-25 18:45:23', NULL);
+INSERT INTO `sys_dict_data` VALUES (1821067084643434498, 0, '入仓', '1', 'wms_inventory_history_type', NULL, 'success', 'N', '1', 'admin', '2024-08-07 14:13:21', 'admin', '2024-09-27 10:53:49', NULL);
+INSERT INTO `sys_dict_data` VALUES (1821067144441626625, 1, '出仓', '2', 'wms_inventory_history_type', NULL, 'danger', 'N', '1', 'admin', '2024-08-07 14:13:36', 'admin', '2024-09-27 10:53:39', NULL);
+INSERT INTO `sys_dict_data` VALUES (1821067181917732866, 2, '调拨', '3', 'wms_inventory_history_type', NULL, 'warning', 'N', '1', 'admin', '2024-08-07 14:13:45', 'admin', '2024-09-27 10:54:01', NULL);
+INSERT INTO `sys_dict_data` VALUES (1821067222455681026, 3, '盘点', '4', 'wms_inventory_history_type', NULL, 'primary', 'N', '1', 'admin', '2024-08-07 14:13:54', 'admin', '2024-08-07 14:58:06', NULL);
+INSERT INTO `sys_dict_data` VALUES (1822820748966006786, 0, '待调拨', '0', 'wms_movement_status', NULL, 'info', 'N', '1', 'admin', '2024-08-12 10:21:48', 'admin', '2024-08-12 10:21:48', NULL);
+INSERT INTO `sys_dict_data` VALUES (1822820794864275457, 1, '已调拨', '1', 'wms_movement_status', NULL, 'primary', 'N', '1', 'admin', '2024-08-12 10:21:59', 'admin', '2024-08-12 10:21:59', NULL);
 INSERT INTO `sys_dict_data` VALUES (1822820855526494210, 2, '作废', '-1', 'wms_movement_status', NULL, 'danger', 'N', '1', 'admin', '2024-08-12 10:22:13', 'admin', '2024-08-12 10:22:13', NULL);
-INSERT INTO `sys_dict_data` VALUES (1823182345731391489, 0, '待盘库', '0', 'wms_check_status', NULL, 'info', 'N', '1', 'admin', '2024-08-13 10:18:39', 'admin', '2024-08-13 10:18:39', NULL);
-INSERT INTO `sys_dict_data` VALUES (1823182400756465666, 1, '已盘库', '1', 'wms_check_status', NULL, 'primary', 'N', '1', 'admin', '2024-08-13 10:18:52', 'admin', '2024-08-13 10:18:52', NULL);
+INSERT INTO `sys_dict_data` VALUES (1823182345731391489, 0, '待盘点', '0', 'wms_check_status', NULL, 'info', 'N', '1', 'admin', '2024-08-13 10:18:39', 'admin', '2024-08-13 10:18:39', NULL);
+INSERT INTO `sys_dict_data` VALUES (1823182400756465666, 1, '已盘点', '1', 'wms_check_status', NULL, 'primary', 'N', '1', 'admin', '2024-08-13 10:18:52', 'admin', '2024-08-13 10:18:52', NULL);
+INSERT INTO `sys_dict_data` VALUES (1824000000000000001, 0, '绿茶', 'green', 'wms_tea_type', NULL, 'success', 'N', '1', 'admin', NOW(), '', NULL, '中国茶类');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000002, 1, '红茶', 'black', 'wms_tea_type', NULL, 'danger', 'N', '1', 'admin', NOW(), '', NULL, '中国茶类');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000003, 2, '乌龙茶', 'oolong', 'wms_tea_type', NULL, 'warning', 'N', '1', 'admin', NOW(), '', NULL, '中国茶类');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000004, 3, '白茶', 'white', 'wms_tea_type', NULL, 'info', 'N', '1', 'admin', NOW(), '', NULL, '中国茶类');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000005, 4, '黑茶', 'dark', 'wms_tea_type', NULL, 'primary', 'N', '1', 'admin', NOW(), '', NULL, '中国茶类');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000006, 5, '普洱茶', 'puer', 'wms_tea_type', NULL, 'primary', 'N', '1', 'admin', NOW(), '', NULL, '中国茶类');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000011, 0, '特级', 'S', 'wms_tea_level', NULL, 'success', 'N', '1', 'admin', NOW(), '', NULL, '茶叶等级');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000012, 1, '一级', 'A', 'wms_tea_level', NULL, 'primary', 'N', '1', 'admin', NOW(), '', NULL, '茶叶等级');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000013, 2, '二级', 'B', 'wms_tea_level', NULL, 'warning', 'N', '1', 'admin', NOW(), '', NULL, '茶叶等级');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000014, 3, '三级', 'C', 'wms_tea_level', NULL, 'info', 'N', '1', 'admin', NOW(), '', NULL, '茶叶等级');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000021, 0, '明前', 'mingqian', 'wms_harvest_season', NULL, 'success', 'N', '1', 'admin', NOW(), '', NULL, '采摘季');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000022, 1, '雨前', 'yuqian', 'wms_harvest_season', NULL, 'primary', 'N', '1', 'admin', NOW(), '', NULL, '采摘季');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000023, 2, '春尾', 'late_spring', 'wms_harvest_season', NULL, 'warning', 'N', '1', 'admin', NOW(), '', NULL, '采摘季');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000024, 3, '夏茶', 'summer', 'wms_harvest_season', NULL, 'danger', 'N', '1', 'admin', NOW(), '', NULL, '采摘季');
+INSERT INTO `sys_dict_data` VALUES (1824000000000000025, 4, '秋茶', 'autumn', 'wms_harvest_season', NULL, 'info', 'N', '1', 'admin', NOW(), '', NULL, '采摘季');
 INSERT INTO `sys_dict_data` VALUES (1823182471136886786, 2, '作废', '-1', 'wms_check_status', NULL, 'danger', 'N', '1', 'admin', '2024-08-13 10:19:09', 'admin', '2024-08-13 10:19:09', NULL);
 
 -- ----------------------------
@@ -230,14 +245,17 @@ INSERT INTO `sys_dict_type` VALUES (7, '通知类型', 'sys_notice_type', '1', '
 INSERT INTO `sys_dict_type` VALUES (8, '通知状态', 'sys_notice_status', '1', 'admin', '2024-06-13 16:06:35', '', NULL, '通知状态列表');
 INSERT INTO `sys_dict_type` VALUES (9, '操作类型', 'sys_oper_type', '1', 'admin', '2024-06-13 16:06:35', '', NULL, '操作类型列表');
 INSERT INTO `sys_dict_type` VALUES (10, '系统状态', 'sys_common_status', '1', 'admin', '2024-06-13 16:06:36', '', NULL, '登录状态列表');
-INSERT INTO `sys_dict_type` VALUES (1812692454547488770, '企业类型', 'merchant_type', '1', 'admin', '2024-07-15 11:35:34', 'admin', '2024-07-16 17:41:32', '企业类型');
-INSERT INTO `sys_dict_type` VALUES (1813152108564373505, '入库状态', 'wms_receipt_status', '1', 'admin', '2024-07-16 18:02:04', 'admin', '2024-07-16 18:02:17', '入库状态');
-INSERT INTO `sys_dict_type` VALUES (1814219082624778242, '入库类型', 'wms_receipt_type', '1', 'admin', '2024-07-19 16:41:51', 'admin', '2024-07-19 16:41:51', NULL);
-INSERT INTO `sys_dict_type` VALUES (1818848671749709825, '出库状态', 'wms_shipment_status', '1', 'admin', '2024-08-01 11:18:11', 'admin', '2024-08-01 11:18:11', NULL);
-INSERT INTO `sys_dict_type` VALUES (1818848738502057985, '出库类型', 'wms_shipment_type', '1', 'admin', '2024-08-01 11:18:26', 'admin', '2024-08-01 11:18:26', NULL);
-INSERT INTO `sys_dict_type` VALUES (1821066855638630402, '库存记录操作类型', 'wms_inventory_history_type', '1', 'admin', '2024-08-07 14:12:27', 'admin', '2024-08-07 14:12:27', NULL);
-INSERT INTO `sys_dict_type` VALUES (1822820566366982146, '移库状态', 'wms_movement_status', '1', 'admin', '2024-08-12 10:21:04', 'admin', '2024-08-12 10:21:04', NULL);
-INSERT INTO `sys_dict_type` VALUES (1823182238898274306, '盘库状态', 'wms_check_status', '1', 'admin', '2024-08-13 10:18:14', 'admin', '2024-08-13 10:18:14', NULL);
+INSERT INTO `sys_dict_type` VALUES (1812692454547488770, '茶企角色类型', 'merchant_type', '1', 'admin', '2024-07-15 11:35:34', 'admin', '2024-07-16 17:41:32', '茶企角色类型');
+INSERT INTO `sys_dict_type` VALUES (1813152108564373505, '采购入仓状态', 'wms_receipt_status', '1', 'admin', '2024-07-16 18:02:04', 'admin', '2024-07-16 18:02:17', '采购入仓状态');
+INSERT INTO `sys_dict_type` VALUES (1814219082624778242, '采购入仓类型', 'wms_receipt_type', '1', 'admin', '2024-07-19 16:41:51', 'admin', '2024-07-19 16:41:51', NULL);
+INSERT INTO `sys_dict_type` VALUES (1818848671749709825, '销售出仓状态', 'wms_shipment_status', '1', 'admin', '2024-08-01 11:18:11', 'admin', '2024-08-01 11:18:11', NULL);
+INSERT INTO `sys_dict_type` VALUES (1818848738502057985, '销售出仓类型', 'wms_shipment_type', '1', 'admin', '2024-08-01 11:18:26', 'admin', '2024-08-01 11:18:26', NULL);
+INSERT INTO `sys_dict_type` VALUES (1821066855638630402, '茶仓流水操作类型', 'wms_inventory_history_type', '1', 'admin', '2024-08-07 14:12:27', 'admin', '2024-08-07 14:12:27', NULL);
+INSERT INTO `sys_dict_type` VALUES (1822820566366982146, '加工调拨状态', 'wms_movement_status', '1', 'admin', '2024-08-12 10:21:04', 'admin', '2024-08-12 10:21:04', NULL);
+INSERT INTO `sys_dict_type` VALUES (1823182238898274306, '茶仓盘点状态', 'wms_check_status', '1', 'admin', '2024-08-13 10:18:14', 'admin', '2024-08-13 10:18:14', NULL);
+INSERT INTO `sys_dict_type` VALUES (1823182238898274310, '茶类', 'wms_tea_type', '1', 'admin', NOW(), '', NULL, '中国茶类');
+INSERT INTO `sys_dict_type` VALUES (1823182238898274311, '茶叶等级', 'wms_tea_level', '1', 'admin', NOW(), '', NULL, '茶叶等级');
+INSERT INTO `sys_dict_type` VALUES (1823182238898274312, '采摘季', 'wms_harvest_season', '1', 'admin', NOW(), '', NULL, '采摘季');
 
 -- ----------------------------
 -- Table structure for sys_logininfor
@@ -367,29 +385,34 @@ INSERT INTO `sys_menu` VALUES (1602, '文件下载', 118, 3, '#', '', '', 0, 0, 
 INSERT INTO `sys_menu` VALUES (1603, '文件删除', 118, 4, '#', '', '', 0, 0, 'F', '1', '1', 'system:oss:remove', '#', 'admin', '2024-06-13 16:06:30', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1604, '配置添加', 118, 5, '#', '', '', 0, 0, 'F', '1', '1', 'system:oss:add', '#', 'admin', '2024-06-13 16:06:30', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1605, '配置编辑', 118, 6, '#', '', '', 0, 0, 'F', '1', '1', 'system:oss:edit', '#', 'admin', '2024-06-13 16:06:30', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1808758090157985794, '基础资料', 0, 100, 'basic', NULL, NULL, 0, 0, 'M', '1', '1', NULL, 'excel', 'admin', '2024-07-04 15:01:48', 'admin', '2024-08-20 13:45:39', '');
-INSERT INTO `sys_menu` VALUES (1809059968309743618, '往来单位', 1808758090157985794, 1, 'merchant', 'wms/basic/merchant/index', NULL, 0, 0, 'C', '1', '1', 'wms:merchant:list', 'documentation', 'admin', '2024-07-05 11:58:12', 'admin', '2024-08-27 16:41:53', '往来单位菜单');
-INSERT INTO `sys_menu` VALUES (1809059968309743619, '往来单位查询', 1809059968309743618, 1, '#', '', NULL, 0, 0, 'F', '1', '1', 'wms:merchant:list', '#', 'admin', '2024-07-05 11:58:12', 'admin', '2024-08-30 10:43:54', '');
-INSERT INTO `sys_menu` VALUES (1809059968309743621, '往来单位修改', 1809059968309743618, 3, '#', '', NULL, 0, 0, 'F', '1', '1', 'wms:merchant:edit', '#', 'admin', '2024-07-05 11:58:12', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1813458070128599041, '仓库管理', 1808758090157985794, 2, 'warehouse', 'wms/basic/warehouse/index', NULL, 0, 0, 'C', '1', '1', 'wms:warehouse:list', 'documentation', 'admin', '2024-07-17 14:17:51', 'wms2_admin', '2024-09-10 13:38:53', '');
-INSERT INTO `sys_menu` VALUES (1813820131794837506, '商品管理', 1808758090157985794, 4, 'item', 'wms/basic/item/index', NULL, 0, 0, 'C', '1', '1', 'wms:item:list', 'documentation', 'admin', '2024-07-18 14:16:33', 'admin', '2024-08-27 16:43:06', '');
-INSERT INTO `sys_menu` VALUES (1815207165755183105, '编辑入库单', 0, 1000, 'receiptOrderEdit', 'wms/order/receipt/edit', NULL, 0, 0, 'C', '0', '1', 'wms:receipt:edit', '#', 'admin', '2024-07-22 10:08:08', 'admin', '2024-08-27 16:43:28', '');
-INSERT INTO `sys_menu` VALUES (1818123963605549057, '品牌管理', 1808758090157985794, 3, 'itemBrand', 'wms/basic/itemBrand/index', NULL, 0, 0, 'C', '1', '1', 'wms:itemBrand:list', 'documentation', 'admin', '2024-07-30 11:18:27', 'admin', '2024-08-27 16:42:55', '');
-INSERT INTO `sys_menu` VALUES (1818466281474822145, '入库', 0, 20, 'receiptOrder', 'wms/order/receipt/index', NULL, 0, 0, 'C', '1', '1', 'wms:receipt:all', 'exit-fullscreen', 'admin', '2024-07-31 09:58:42', 'admin', '2024-08-30 08:58:25', '');
-INSERT INTO `sys_menu` VALUES (1818854933803638785, '出库', 0, 30, 'shipmentOrder', 'wms/order/shipment/index', NULL, 0, 0, 'C', '1', '1', 'wms:shipment:all', 'fullscreen', 'admin', '2024-08-01 11:43:04', 'admin', '2024-08-30 08:58:35', '');
-INSERT INTO `sys_menu` VALUES (1818855673632727042, '编辑出库单', 0, 1000, 'shipmentOrderEdit', 'wms/order/shipment/edit', NULL, 0, 0, 'C', '0', '1', 'wms:shipment:edit', '#', 'admin', '2024-08-01 11:46:00', 'admin', '2024-08-27 16:43:37', '');
-INSERT INTO `sys_menu` VALUES (1820729144067321858, '库存统计', 0, 0, 'inventory', 'wms/inventory/statistic', NULL, 0, 0, 'C', '1', '1', 'wms:inventory:all', 'chart', 'admin', '2024-08-06 15:50:30', 'admin', '2024-08-30 08:57:48', '');
-INSERT INTO `sys_menu` VALUES (1821075355068559361, '库存记录', 0, 3, 'inventoryHistory', 'wms/inventory/history', NULL, 0, 0, 'C', '1', '1', 'wms:inventoryHistory:all', 'list', 'admin', '2024-08-07 14:46:13', 'admin', '2024-08-30 08:58:13', '');
-INSERT INTO `sys_menu` VALUES (1822820194307051521, '移库', 0, 40, 'movementOrder', 'wms/order/movement/index', NULL, 0, 0, 'C', '1', '1', 'wms:movement:all', 'drag', 'admin', '2024-08-12 10:19:35', 'admin', '2024-08-30 08:58:44', '');
-INSERT INTO `sys_menu` VALUES (1822862323595145218, '编辑移库单', 0, 1000, 'movementOrderEdit', 'wms/order/movement/edit', NULL, 0, 0, 'C', '0', '1', 'wms:movement:edit', '#', 'admin', '2024-08-12 13:07:00', 'admin', '2024-08-27 16:43:50', '');
-INSERT INTO `sys_menu` VALUES (1823187248797270018, '盘库', 0, 50, 'checkOrder', 'wms/order/check/index', NULL, 0, 0, 'C', '1', '1', 'wms:check:all', 'example', 'admin', '2024-08-13 10:38:08', 'admin', '2024-08-30 08:58:57', '');
-INSERT INTO `sys_menu` VALUES (1823190638784757762, '编辑盘库单', 0, 1000, 'checkOrderEdit', 'wms/order/check/edit', NULL, 0, 0, 'C', '0', '1', 'wms:check:edit', '#', 'admin', '2024-08-13 10:51:36', 'admin', '2024-08-27 16:43:44', '');
-INSERT INTO `sys_menu` VALUES (1829349433573822466, '仓库查询', 1813458070128599041, 1, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:warehouse:list', '#', 'admin', '2024-08-30 10:44:27', 'wms2_admin', '2024-09-10 13:39:02', '');
-INSERT INTO `sys_menu` VALUES (1829350022131142658, '仓库编辑', 1813458070128599041, 2, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:warehouse:edit', '#', 'admin', '2024-08-30 10:46:48', 'wms2_admin', '2024-09-10 13:39:10', '');
-INSERT INTO `sys_menu` VALUES (1829350164603260929, '品牌查询', 1818123963605549057, 1, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:itemBrand:list', '#', 'admin', '2024-08-30 10:47:22', 'admin', '2024-08-30 10:47:22', '');
-INSERT INTO `sys_menu` VALUES (1829350944311791617, '品牌编辑', 1818123963605549057, 2, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:itemBrand:edit', '#', 'admin', '2024-08-30 10:50:27', 'admin', '2024-08-30 10:50:27', '');
-INSERT INTO `sys_menu` VALUES (1829351081448755202, '商品查询', 1813820131794837506, 1, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:item:list', '#', 'admin', '2024-08-30 10:51:00', 'admin', '2024-08-30 10:51:00', '');
-INSERT INTO `sys_menu` VALUES (1829351166857367553, '商品编辑', 1813820131794837506, 2, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:item:edit', '#', 'admin', '2024-08-30 10:51:21', 'admin', '2024-08-30 10:51:21', '');
+INSERT INTO `sys_menu` VALUES (1808758090157985794, '茶企档案', 0, 10, 'teaOrg', NULL, NULL, 0, 0, 'M', '1', '1', NULL, 'excel', 'admin', '2024-07-04 15:01:48', 'admin', '2024-08-20 13:45:39', '茶企档案');
+INSERT INTO `sys_menu` VALUES (1809059968309743618, '茶企管理', 1808758090157985794, 1, 'merchant', 'wms/basic/merchant/index', NULL, 0, 0, 'C', '1', '1', 'wms:merchant:list', 'documentation', 'admin', '2024-07-05 11:58:12', 'admin', '2024-08-27 16:41:53', '茶企管理菜单');
+INSERT INTO `sys_menu` VALUES (1809059968309743619, '茶企查询', 1809059968309743618, 1, '#', '', NULL, 0, 0, 'F', '1', '1', 'wms:merchant:list', '#', 'admin', '2024-07-05 11:58:12', 'admin', '2024-08-30 10:43:54', '');
+INSERT INTO `sys_menu` VALUES (1809059968309743621, '茶企修改', 1809059968309743618, 3, '#', '', NULL, 0, 0, 'F', '1', '1', 'wms:merchant:edit', '#', 'admin', '2024-07-05 11:58:12', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1813458070128599041, '茶仓管理', 1808758090157985794, 2, 'warehouse', 'wms/basic/warehouse/index', NULL, 0, 0, 'C', '1', '1', 'wms:warehouse:list', 'documentation', 'admin', '2024-07-17 14:17:51', 'admin', '2024-09-10 13:38:53', '');
+INSERT INTO `sys_menu` VALUES (1813820131794837506, '茶品档案', 1808758090157985794, 4, 'item', 'wms/basic/item/index', NULL, 0, 0, 'C', '1', '1', 'wms:item:list', 'documentation', 'admin', '2024-07-18 14:16:33', 'admin', '2024-08-27 16:43:06', '');
+INSERT INTO `sys_menu` VALUES (1815207165755183105, '编辑采购入仓单', 1900000000000000001, 1000, 'receiptOrderEdit', 'wms/order/receipt/edit', NULL, 0, 0, 'C', '0', '1', 'wms:receipt:edit', '#', 'admin', '2024-07-22 10:08:08', 'admin', '2024-08-27 16:43:28', '');
+INSERT INTO `sys_menu` VALUES (1818123963605549057, '品牌产地', 1808758090157985794, 3, 'itemBrand', 'wms/basic/itemBrand/index', NULL, 0, 0, 'C', '1', '1', 'wms:itemBrand:list', 'documentation', 'admin', '2024-07-30 11:18:27', 'admin', '2024-08-27 16:42:55', '');
+INSERT INTO `sys_menu` VALUES (1900000000000000001, '采购入仓', 0, 20, 'teaReceipt', NULL, NULL, 0, 0, 'M', '1', '1', NULL, 'exit-fullscreen', 'admin', NOW(), '', NULL, '采购入仓目录');
+INSERT INTO `sys_menu` VALUES (1900000000000000002, '销售出仓', 0, 30, 'teaShipment', NULL, NULL, 0, 0, 'M', '1', '1', NULL, 'fullscreen', 'admin', NOW(), '', NULL, '销售出仓目录');
+INSERT INTO `sys_menu` VALUES (1900000000000000003, '加工调拨', 0, 40, 'teaMovement', NULL, NULL, 0, 0, 'M', '1', '1', NULL, 'drag', 'admin', NOW(), '', NULL, '加工调拨目录');
+INSERT INTO `sys_menu` VALUES (1900000000000000004, '茶仓盘点', 0, 50, 'teaCheck', NULL, NULL, 0, 0, 'M', '1', '1', NULL, 'example', 'admin', NOW(), '', NULL, '茶仓盘点目录');
+INSERT INTO `sys_menu` VALUES (1900000000000000005, '库存分析', 0, 60, 'teaInventory', NULL, NULL, 0, 0, 'M', '1', '1', NULL, 'chart', 'admin', NOW(), '', NULL, '库存分析目录');
+INSERT INTO `sys_menu` VALUES (1818466281474822145, '采购入仓单', 1900000000000000001, 1, 'receiptOrder', 'wms/order/receipt/index', NULL, 0, 0, 'C', '1', '1', 'wms:receipt:all', 'exit-fullscreen', 'admin', '2024-07-31 09:58:42', 'admin', '2024-08-30 08:58:25', '');
+INSERT INTO `sys_menu` VALUES (1818854933803638785, '销售出仓单', 1900000000000000002, 1, 'shipmentOrder', 'wms/order/shipment/index', NULL, 0, 0, 'C', '1', '1', 'wms:shipment:all', 'fullscreen', 'admin', '2024-08-01 11:43:04', 'admin', '2024-08-30 08:58:35', '');
+INSERT INTO `sys_menu` VALUES (1818855673632727042, '编辑销售出仓单', 1900000000000000002, 1000, 'shipmentOrderEdit', 'wms/order/shipment/edit', NULL, 0, 0, 'C', '0', '1', 'wms:shipment:edit', '#', 'admin', '2024-08-01 11:46:00', 'admin', '2024-08-27 16:43:37', '');
+INSERT INTO `sys_menu` VALUES (1820729144067321858, '茶仓库存', 1900000000000000005, 1, 'inventory', 'wms/inventory/statistic', NULL, 0, 0, 'C', '1', '1', 'wms:inventory:all', 'chart', 'admin', '2024-08-06 15:50:30', 'admin', '2024-08-30 08:57:48', '');
+INSERT INTO `sys_menu` VALUES (1821075355068559361, '库存流水', 1900000000000000005, 2, 'inventoryHistory', 'wms/inventory/history', NULL, 0, 0, 'C', '1', '1', 'wms:inventoryHistory:all', 'list', 'admin', '2024-08-07 14:46:13', 'admin', '2024-08-30 08:58:13', '');
+INSERT INTO `sys_menu` VALUES (1822820194307051521, '加工调拨单', 1900000000000000003, 1, 'movementOrder', 'wms/order/movement/index', NULL, 0, 0, 'C', '1', '1', 'wms:movement:all', 'drag', 'admin', '2024-08-12 10:19:35', 'admin', '2024-08-30 08:58:44', '');
+INSERT INTO `sys_menu` VALUES (1822862323595145218, '编辑加工调拨单', 1900000000000000003, 1000, 'movementOrderEdit', 'wms/order/movement/edit', NULL, 0, 0, 'C', '0', '1', 'wms:movement:edit', '#', 'admin', '2024-08-12 13:07:00', 'admin', '2024-08-27 16:43:50', '');
+INSERT INTO `sys_menu` VALUES (1823187248797270018, '茶仓盘点单', 1900000000000000004, 1, 'checkOrder', 'wms/order/check/index', NULL, 0, 0, 'C', '1', '1', 'wms:check:all', 'example', 'admin', '2024-08-13 10:38:08', 'admin', '2024-08-30 08:58:57', '');
+INSERT INTO `sys_menu` VALUES (1823190638784757762, '编辑茶仓盘点单', 1900000000000000004, 1000, 'checkOrderEdit', 'wms/order/check/edit', NULL, 0, 0, 'C', '0', '1', 'wms:check:edit', '#', 'admin', '2024-08-13 10:51:36', 'admin', '2024-08-27 16:43:44', '');
+INSERT INTO `sys_menu` VALUES (1829349433573822466, '茶仓查询', 1813458070128599041, 1, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:warehouse:list', '#', 'admin', '2024-08-30 10:44:27', 'admin', '2024-09-10 13:39:02', '');
+INSERT INTO `sys_menu` VALUES (1829350022131142658, '茶仓编辑', 1813458070128599041, 2, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:warehouse:edit', '#', 'admin', '2024-08-30 10:46:48', 'admin', '2024-09-10 13:39:10', '');
+INSERT INTO `sys_menu` VALUES (1829350164603260929, '品牌产地查询', 1818123963605549057, 1, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:itemBrand:list', '#', 'admin', '2024-08-30 10:47:22', 'admin', '2024-08-30 10:47:22', '');
+INSERT INTO `sys_menu` VALUES (1829350944311791617, '品牌产地编辑', 1818123963605549057, 2, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:itemBrand:edit', '#', 'admin', '2024-08-30 10:50:27', 'admin', '2024-08-30 10:50:27', '');
+INSERT INTO `sys_menu` VALUES (1829351081448755202, '茶品查询', 1813820131794837506, 1, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:item:list', '#', 'admin', '2024-08-30 10:51:00', 'admin', '2024-08-30 10:51:00', '');
+INSERT INTO `sys_menu` VALUES (1829351166857367553, '茶品编辑', 1813820131794837506, 2, '', NULL, NULL, 0, 0, 'F', '1', '1', 'wms:item:edit', '#', 'admin', '2024-08-30 10:51:21', 'admin', '2024-08-30 10:51:21', '');
 
 -- ----------------------------
 -- Table structure for sys_notice
@@ -583,6 +606,11 @@ INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1813458070128599041);
 INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1813820131794837506);
 INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1815207165755183105);
 INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1818123963605549057);
+INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1900000000000000001);
+INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1900000000000000002);
+INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1900000000000000003);
+INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1900000000000000004);
+INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1900000000000000005);
 INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1818466281474822145);
 INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1818854933803638785);
 INSERT INTO `sys_role_menu` VALUES (1829105952432427010, 1818855673632727042);
@@ -626,8 +654,8 @@ CREATE TABLE `sys_user`  (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES (1, 103, 'admin', '程序员诚哥', 'sys_user', 'zccbbg@qq.com', '18888888888', '0', '', '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', '1', '0', '221.224.86.138', '2024-10-09 15:21:06', 'admin', '2024-06-13 16:06:25', 'wms2_admin', '2024-10-09 15:21:06', '管理员');
-INSERT INTO `sys_user` VALUES (1829105396288688129, 105, 'ck', 'ck', 'sys_user', '', '', '0', '', '$2a$10$5ogFpqit10a8IpVFjKzosuz0whR0/tyQ4Nt9e6y3/MBodcDzwhCni', '1', '0', '221.224.86.138', '2024-10-09 15:40:16', 'admin', '2024-08-29 18:34:44', 'ck', '2024-10-09 15:40:16', NULL);
+INSERT INTO `sys_user` VALUES (1, 103, 'admin', '国茶运营管理员', 'sys_user', 'admin@guochatea.cn', '18888888888', '0', '', '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', '1', '0', '221.224.86.138', '2024-10-09 15:21:06', 'admin', '2024-06-13 16:06:25', 'admin', '2024-10-09 15:21:06', '管理员');
+INSERT INTO `sys_user` VALUES (1829105396288688129, 105, 'ck', '茶仓调度员', 'sys_user', 'dispatch@guochatea.cn', '13900000000', '0', '', '$2a$10$5ogFpqit10a8IpVFjKzosuz0whR0/tyQ4Nt9e6y3/MBodcDzwhCni', '1', '0', '221.224.86.138', '2024-10-09 15:40:16', 'admin', '2024-08-29 18:34:44', 'admin', '2024-10-09 15:40:16', NULL);
 
 -- ----------------------------
 -- Table structure for sys_user_post
@@ -682,7 +710,7 @@ CREATE TABLE `wms_check_order`  (
 -- ----------------------------
 -- Records of wms_check_order
 -- ----------------------------
-INSERT INTO `wms_check_order` VALUES (1843920323943682049, 'PK10091586', 1, 2.00, NULL, 1828364740028174337, NULL, 'ck', '2024-10-09 15:43:58.273', 'ck', '2024-10-09 15:43:58.273');
+INSERT INTO `wms_check_order` VALUES (1843920323943682049, 'CK24050915', 1, 78.00, NULL, 1828364740028174337, '福鼎审评仓季度盘点', 'admin', '2024-10-09 15:43:58.273', 'admin', '2024-10-09 15:43:58.273');
 
 -- ----------------------------
 -- Table structure for wms_check_order_detail
@@ -708,8 +736,8 @@ CREATE TABLE `wms_check_order_detail`  (
 -- ----------------------------
 -- Records of wms_check_order_detail
 -- ----------------------------
-INSERT INTO `wms_check_order_detail` VALUES (1843920323981430786, 1843920323943682049, 1840282974696374273, 0.00, NULL, 1.00, 1828364740028174337, NULL, NULL, 'ck', '2024-10-09 15:43:58.283', 'ck', '2024-10-09 15:43:58.283');
-INSERT INTO `wms_check_order_detail` VALUES (1843920323981430787, 1843920323943682049, 1840282974629265410, 0.00, NULL, 1.00, 1828364740028174337, NULL, NULL, 'ck', '2024-10-09 15:43:58.287', 'ck', '2024-10-09 15:43:58.287');
+INSERT INTO `wms_check_order_detail` VALUES (1843920323981430786, 1843920323943682049, 1840282974696374273, 48.00, NULL, 48.00, 1828364740028174337, '白牡丹特级季末盘点', NULL, 'admin', '2024-10-09 15:43:58.283', 'admin', '2024-10-09 15:43:58.283');
+INSERT INTO `wms_check_order_detail` VALUES (1843920323981430787, 1843920323943682049, 1840282974629265410, 30.00, NULL, 30.00, 1828364740028174337, '白牡丹一级季末盘点', NULL, 'admin', '2024-10-09 15:43:58.287', 'admin', '2024-10-09 15:43:58.287');
 
 -- ----------------------------
 -- Table structure for wms_inventory
@@ -731,11 +759,11 @@ CREATE TABLE `wms_inventory`  (
 -- ----------------------------
 -- Records of wms_inventory
 -- ----------------------------
-INSERT INTO `wms_inventory` VALUES (1843920012193648642, 1840282974696374273, 1828364609002311682, 3.00, NULL, 'ck', '2024-10-09 15:42:43.944', 'ck', '2024-10-09 15:43:42.419');
-INSERT INTO `wms_inventory` VALUES (1843920012193648643, 1840282974629265410, 1828364609002311682, 3.00, NULL, 'ck', '2024-10-09 15:42:43.945', 'ck', '2024-10-09 15:43:12.844');
-INSERT INTO `wms_inventory` VALUES (1843920257526878210, 1840282974696374273, 1840317750635581441, 1.00, NULL, 'ck', '2024-10-09 15:43:42.434', 'ck', '2024-10-09 15:43:42.434');
-INSERT INTO `wms_inventory` VALUES (1843920324082094081, 1840282974696374273, 1828364740028174337, 1.00, NULL, 'ck', '2024-10-09 15:43:58.304', 'ck', '2024-10-09 15:43:58.304');
-INSERT INTO `wms_inventory` VALUES (1843920324082094082, 1840282974629265410, 1828364740028174337, 1.00, NULL, 'ck', '2024-10-09 15:43:58.306', 'ck', '2024-10-09 15:43:58.306');
+INSERT INTO `wms_inventory` VALUES (1843920012193648642, 1840282974696374273, 1828364609002311682, 120.00, '龙井与白牡丹主仓库存', 'admin', '2024-10-09 15:42:43.944', 'admin', '2024-10-09 15:43:42.419');
+INSERT INTO `wms_inventory` VALUES (1843920012193648643, 1840282974629265410, 1828364609002311682, 80.00, '白牡丹一级库存', 'admin', '2024-10-09 15:42:43.945', 'admin', '2024-10-09 15:43:12.844');
+INSERT INTO `wms_inventory` VALUES (1843920257526878210, 1840282974696374273, 1840317750635581441, 36.00, '华北成品仓库存', 'admin', '2024-10-09 15:43:42.434', 'admin', '2024-10-09 15:43:42.434');
+INSERT INTO `wms_inventory` VALUES (1843920324082094081, 1840282974696374273, 1828364740028174337, 48.00, '审评样仓库存', 'admin', '2024-10-09 15:43:58.304', 'admin', '2024-10-09 15:43:58.304');
+INSERT INTO `wms_inventory` VALUES (1843920324082094082, 1840282974629265410, 1828364740028174337, 30.00, '审评样仓库存', 'admin', '2024-10-09 15:43:58.306', 'admin', '2024-10-09 15:43:58.306');
 
 -- ----------------------------
 -- Table structure for wms_inventory_history
@@ -760,13 +788,13 @@ CREATE TABLE `wms_inventory_history`  (
 -- ----------------------------
 -- Records of wms_inventory_history
 -- ----------------------------
-INSERT INTO `wms_inventory_history` VALUES (1843920012248174593, 1828364609002311682, 1840282974696374273, 4.00, 0.00, 4.00, 4000.00, NULL, 1843920012030070785, 'RK10098845', 1, '2024-10-09 15:42:43.958');
-INSERT INTO `wms_inventory_history` VALUES (1843920012248174594, 1828364609002311682, 1840282974629265410, 4.00, 0.00, 4.00, 4000.00, NULL, 1843920012030070785, 'RK10098845', 1, '2024-10-09 15:42:43.960');
-INSERT INTO `wms_inventory_history` VALUES (1843920133446782977, 1828364609002311682, 1840282974629265410, -1.00, 4.00, 3.00, NULL, NULL, 1843920133316759553, 'CK10094547', 2, '2024-10-09 15:43:12.851');
-INSERT INTO `wms_inventory_history` VALUES (1843920257560432641, 1828364609002311682, 1840282974696374273, -1.00, 4.00, 3.00, NULL, NULL, 1843920257199722498, 'YK10096786', 3, '2024-10-09 15:43:42.442');
-INSERT INTO `wms_inventory_history` VALUES (1843920257581404162, 1840317750635581441, 1840282974696374273, 1.00, 0.00, 1.00, NULL, NULL, 1843920257199722498, 'YK10096786', 3, '2024-10-09 15:43:42.448');
-INSERT INTO `wms_inventory_history` VALUES (1843920324149202945, 1828364740028174337, 1840282974696374273, 1.00, 0.00, 1.00, NULL, NULL, NULL, 'PK10091586', 4, '2024-10-09 15:43:58.318');
-INSERT INTO `wms_inventory_history` VALUES (1843920324157591554, 1828364740028174337, 1840282974629265410, 1.00, 0.00, 1.00, NULL, NULL, NULL, 'PK10091586', 4, '2024-10-09 15:43:58.320');
+INSERT INTO `wms_inventory_history` VALUES (1843920012248174593, 1828364609002311682, 1840282974696374273, 120.00, 0.00, 120.00, 32160.00, '春茶批次入仓', 1843920012030070785, 'RC24050988', 1, '2024-10-09 15:42:43.958');
+INSERT INTO `wms_inventory_history` VALUES (1843920012248174594, 1828364609002311682, 1840282974629265410, 80.00, 0.00, 80.00, 15040.00, '白牡丹入仓', 1843920012030070785, 'RC24050988', 1, '2024-10-09 15:42:43.960');
+INSERT INTO `wms_inventory_history` VALUES (1843920133446782977, 1828364609002311682, 1840282974629265410, -20.00, 80.00, 60.00, 5160.00, '渠道发货', 1843920133316759553, 'SC24050945', 2, '2024-10-09 15:43:12.851');
+INSERT INTO `wms_inventory_history` VALUES (1843920257560432641, 1828364609002311682, 1840282974696374273, -36.00, 120.00, 84.00, NULL, '调拨至华北仓', 1843920257199722498, 'TR24050967', 3, '2024-10-09 15:43:42.442');
+INSERT INTO `wms_inventory_history` VALUES (1843920257581404162, 1840317750635581441, 1840282974696374273, 36.00, 0.00, 36.00, NULL, '华北仓入账', 1843920257199722498, 'TR24050967', 3, '2024-10-09 15:43:42.448');
+INSERT INTO `wms_inventory_history` VALUES (1843920324149202945, 1828364740028174337, 1840282974696374273, 48.00, 0.00, 48.00, NULL, '季度盘点建账', NULL, 'CK24050915', 4, '2024-10-09 15:43:58.318');
+INSERT INTO `wms_inventory_history` VALUES (1843920324157591554, 1828364740028174337, 1840282974629265410, 30.00, 0.00, 30.00, NULL, '季度盘点建账', NULL, 'CK24050915', 4, '2024-10-09 15:43:58.320');
 
 -- ----------------------------
 -- Table structure for wms_item
@@ -779,28 +807,25 @@ CREATE TABLE `wms_item`  (
   `item_category` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '分类',
   `unit` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '单位类别',
   `item_brand` bigint(20) NULL DEFAULT NULL COMMENT '品牌',
+  `tea_type` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '茶类',
+  `tea_origin` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '产区',
+  `tea_level` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '等级',
+  `harvest_season` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '采摘季',
   `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '备注',
   `create_by` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '创建人',
   `create_time` datetime(3) NULL DEFAULT NULL COMMENT '创建时间',
   `update_by` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '修改人',
   `update_time` datetime(3) NULL DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1840308261127651331 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '物料' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1840308261127651331 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '茶品主档' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of wms_item
 -- ----------------------------
-INSERT INTO `wms_item` VALUES (1828402622516334594, NULL, '华为 nova flip', '1828364988754595841', NULL, 1828364927610032129, NULL, 'admin', '2024-08-27 20:02:09.948', 'admin', '2024-09-02 21:45:27.127');
-INSERT INTO `wms_item` VALUES (1828406450112335874, NULL, 'macbook', '1828365043024695297', NULL, 1828364873889386498, NULL, 'admin', '2024-08-27 20:17:22.521', 'admin', '2024-08-27 20:17:22.521');
-INSERT INTO `wms_item` VALUES (1828407870173646849, NULL, '爱普生打印机', '1828365014901886978', NULL, NULL, NULL, 'admin', '2024-08-27 20:23:01.096', 'admin', '2024-08-27 20:23:01.096');
-INSERT INTO `wms_item` VALUES (1828408320146968578, NULL, '小米米家436L十字四门风冷无霜嵌入式家用冰箱', '1828405773474631681', NULL, 1828364846953566209, NULL, 'admin', '2024-08-27 20:24:48.375', 'admin', '2024-08-27 20:24:48.375');
-INSERT INTO `wms_item` VALUES (1828408795734904833, NULL, '杠铃', '1828408600515219457', NULL, NULL, NULL, 'admin', '2024-08-27 20:26:41.757', 'admin', '2024-08-27 20:33:27.034');
-INSERT INTO `wms_item` VALUES (1829398192563351554, NULL, '舟山带鱼', '1829398007993004034', NULL, NULL, NULL, 'admin', '2024-08-30 13:58:12.354', 'admin', '2024-08-30 14:01:08.050');
-INSERT INTO `wms_item` VALUES (1829398333580046338, NULL, '青岛大虾', '1829398007993004034', NULL, NULL, NULL, 'admin', '2024-08-30 13:58:45.971', 'admin', '2024-08-30 14:00:49.686');
-INSERT INTO `wms_item` VALUES (1829398492388978689, NULL, '启东黄鱼', '1829398007993004034', NULL, NULL, NULL, 'admin', '2024-08-30 13:59:23.834', 'admin', '2024-08-30 14:00:32.373');
-INSERT INTO `wms_item` VALUES (1829398701680553985, NULL, '红富士苹果', '1829397958923841538', NULL, NULL, NULL, 'admin', '2024-08-30 14:00:13.735', 'admin', '2024-08-30 14:00:13.735');
-INSERT INTO `wms_item` VALUES (1829399118040723457, NULL, '树山梨', '1829397958923841538', NULL, NULL, NULL, 'admin', '2024-08-30 14:01:52.989', 'admin', '2024-08-30 14:01:52.989');
-INSERT INTO `wms_item` VALUES (1840282974297915394, NULL, '小米空调', '1840282771834667010', NULL, 1828364846953566209, NULL, 'wms2_admin', '2024-09-29 14:50:26.535', 'wms2_admin', '2024-09-29 14:50:26.535');
+INSERT INTO `wms_item` VALUES (1828402622516334594, 'TEA-LJ-001', '西湖龙井', '1828364988754595841', '斤', 1828364846953566209, 'green', '浙江杭州西湖区', 'S', 'mingqian', '明前头采', 'admin', '2024-08-27 20:02:09.948', 'admin', '2024-09-02 21:45:27.127');
+INSERT INTO `wms_item` VALUES (1828406450112335874, 'TEA-TGY-001', '安溪铁观音', '1828365043024695297', '斤', 1828364873889386498, 'oolong', '福建安溪', 'A', 'autumn', '浓香型', 'admin', '2024-08-27 20:17:22.521', 'admin', '2024-08-27 20:17:22.521');
+INSERT INTO `wms_item` VALUES (1829398701680553985, 'TEA-JJ-001', '金骏眉', '1828365014901886978', '斤', 1828364927610032129, 'black', '福建武夷山', 'S', 'mingqian', '桐木关工艺', 'admin', '2024-08-30 14:00:13.735', 'admin', '2024-08-30 14:00:13.735');
+INSERT INTO `wms_item` VALUES (1840282974297915394, 'TEA-BMD-001', '白牡丹', '1840282771834667010', '斤', 1828407291103842306, 'white', '福建福鼎', 'A', 'yuqian', '福鼎白茶', 'admin', '2024-09-29 14:50:26.535', 'admin', '2024-09-29 14:50:26.535');
 
 -- ----------------------------
 -- Table structure for wms_item_brand
@@ -814,16 +839,16 @@ CREATE TABLE `wms_item_brand`  (
   `update_by` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '更新者',
   `update_time` datetime(3) NULL DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1828407291103842307 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '商品品牌表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1828407291103842307 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '茶品牌产地表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of wms_item_brand
 -- ----------------------------
-INSERT INTO `wms_item_brand` VALUES (1828364846953566209, '小米', 'admin', '2024-08-27 17:32:03.551', 'admin', '2024-08-27 17:32:03.551');
-INSERT INTO `wms_item_brand` VALUES (1828364873889386498, '苹果', 'admin', '2024-08-27 17:32:09.971', 'admin', '2024-08-27 17:32:09.971');
-INSERT INTO `wms_item_brand` VALUES (1828364927610032129, '华为', 'admin', '2024-08-27 17:32:22.786', 'admin', '2024-08-27 17:32:22.786');
-INSERT INTO `wms_item_brand` VALUES (1828407151135723522, '爱普生', 'admin', '2024-08-27 20:20:09.656', 'admin', '2024-08-27 20:20:09.656');
-INSERT INTO `wms_item_brand` VALUES (1828407291103842306, '惠普', 'admin', '2024-08-27 20:20:43.031', 'admin', '2024-08-27 20:20:43.031');
+INSERT INTO `wms_item_brand` VALUES (1828364846953566209, '西湖牌', 'admin', '2024-08-27 17:32:03.551', 'admin', '2024-08-27 17:32:03.551');
+INSERT INTO `wms_item_brand` VALUES (1828364873889386498, '八马茶业', 'admin', '2024-08-27 17:32:09.971', 'admin', '2024-08-27 17:32:09.971');
+INSERT INTO `wms_item_brand` VALUES (1828364927610032129, '武夷星', 'admin', '2024-08-27 17:32:22.786', 'admin', '2024-08-27 17:32:22.786');
+INSERT INTO `wms_item_brand` VALUES (1828407151135723522, '大益', 'admin', '2024-08-27 20:20:09.656', 'admin', '2024-08-27 20:20:09.656');
+INSERT INTO `wms_item_brand` VALUES (1828407291103842306, '品品香', 'admin', '2024-08-27 20:20:43.031', 'admin', '2024-08-27 20:20:43.031');
 
 -- ----------------------------
 -- Table structure for wms_item_category
@@ -845,17 +870,17 @@ CREATE TABLE `wms_item_category`  (
 -- ----------------------------
 -- Records of wms_item_category
 -- ----------------------------
-INSERT INTO `wms_item_category` VALUES (1828364988754595841, 0, '手机', 0, '1', 'admin', '2024-08-27 17:32:37.357', 'admin', '2024-08-27 20:14:12.100');
-INSERT INTO `wms_item_category` VALUES (1828365014901886978, 0, '打印机', 1, '1', 'admin', '2024-08-27 17:32:43.598', 'admin', '2024-08-27 20:14:12.447');
-INSERT INTO `wms_item_category` VALUES (1828365043024695297, 0, '电脑', 3, '1', 'admin', '2024-08-27 17:32:50.301', 'admin', '2024-08-27 20:14:12.704');
-INSERT INTO `wms_item_category` VALUES (1828405743737016322, 0, '家电', 4, '1', 'admin', '2024-08-27 20:14:34.104', 'admin', '2024-08-27 20:14:34.104');
-INSERT INTO `wms_item_category` VALUES (1828405773474631681, 1828405743737016322, '冰箱', 0, '1', 'admin', '2024-08-27 20:14:41.195', 'admin', '2024-08-27 20:14:41.195');
-INSERT INTO `wms_item_category` VALUES (1828405825714688001, 1828405743737016322, '电视', 1, '1', 'admin', '2024-08-27 20:14:53.651', 'admin', '2024-08-27 20:14:53.651');
-INSERT INTO `wms_item_category` VALUES (1828408600515219457, 0, '健生器材', 5, '1', 'admin', '2024-08-27 20:25:55.213', 'admin', '2024-08-27 20:25:55.213');
-INSERT INTO `wms_item_category` VALUES (1829397860466749441, 0, '生鲜', 6, '1', 'admin', '2024-08-30 13:56:53.174', 'admin', '2024-08-30 13:56:53.174');
-INSERT INTO `wms_item_category` VALUES (1829397958923841538, 1829397860466749441, '水果', 0, '1', 'admin', '2024-08-30 13:57:16.644', 'admin', '2024-08-30 13:57:16.644');
-INSERT INTO `wms_item_category` VALUES (1829398007993004034, 1829397860466749441, '海鲜', 1, '1', 'admin', '2024-08-30 13:57:28.347', 'admin', '2024-08-30 13:57:28.347');
-INSERT INTO `wms_item_category` VALUES (1840282771834667010, 1828405743737016322, '空调', 2, '1', 'wms2_admin', '2024-09-29 14:49:38.274', 'wms2_admin', '2024-09-29 14:49:38.274');
+INSERT INTO `wms_item_category` VALUES (1828364988754595841, 0, '绿茶', 0, '1', 'admin', '2024-08-27 17:32:37.357', 'admin', '2024-08-27 20:14:12.100');
+INSERT INTO `wms_item_category` VALUES (1828365014901886978, 0, '红茶', 1, '1', 'admin', '2024-08-27 17:32:43.598', 'admin', '2024-08-27 20:14:12.447');
+INSERT INTO `wms_item_category` VALUES (1828365043024695297, 0, '乌龙茶', 2, '1', 'admin', '2024-08-27 17:32:50.301', 'admin', '2024-08-27 20:14:12.704');
+INSERT INTO `wms_item_category` VALUES (1828405743737016322, 0, '白茶', 3, '1', 'admin', '2024-08-27 20:14:34.104', 'admin', '2024-08-27 20:14:34.104');
+INSERT INTO `wms_item_category` VALUES (1828405773474631681, 1828405743737016322, '白牡丹', 0, '1', 'admin', '2024-08-27 20:14:41.195', 'admin', '2024-08-27 20:14:41.195');
+INSERT INTO `wms_item_category` VALUES (1828405825714688001, 1828405743737016322, '寿眉', 1, '1', 'admin', '2024-08-27 20:14:53.651', 'admin', '2024-08-27 20:14:53.651');
+INSERT INTO `wms_item_category` VALUES (1828408600515219457, 0, '黑茶', 4, '1', 'admin', '2024-08-27 20:25:55.213', 'admin', '2024-08-27 20:25:55.213');
+INSERT INTO `wms_item_category` VALUES (1829397860466749441, 0, '普洱茶', 5, '1', 'admin', '2024-08-30 13:56:53.174', 'admin', '2024-08-30 13:56:53.174');
+INSERT INTO `wms_item_category` VALUES (1829397958923841538, 1829397860466749441, '生普', 0, '1', 'admin', '2024-08-30 13:57:16.644', 'admin', '2024-08-30 13:57:16.644');
+INSERT INTO `wms_item_category` VALUES (1829398007993004034, 1829397860466749441, '熟普', 1, '1', 'admin', '2024-08-30 13:57:28.347', 'admin', '2024-08-30 13:57:28.347');
+INSERT INTO `wms_item_category` VALUES (1840282771834667010, 1828405743737016322, '贡眉', 2, '1', 'admin', '2024-09-29 14:49:38.274', 'admin', '2024-09-29 14:49:38.274');
 
 -- ----------------------------
 -- Table structure for wms_item_sku
@@ -884,27 +909,11 @@ CREATE TABLE `wms_item_sku`  (
 -- ----------------------------
 -- Records of wms_item_sku
 -- ----------------------------
-INSERT INTO `wms_item_sku` VALUES (1828402624005312514, '黑', 1828402622516334594, 'x00003', '00001', NULL, NULL, NULL, NULL, NULL, 5000.00, 5288.00, 'admin', '2024-08-27 20:02:10.302', 'admin', '2024-09-02 21:45:27.177');
-INSERT INTO `wms_item_sku` VALUES (1828402624005312515, '白', 1828402622516334594, '', '000002', NULL, NULL, NULL, NULL, NULL, 5000.00, 5288.00, 'admin', '2024-08-27 20:02:10.304', 'admin', '2024-09-02 21:45:27.184');
-INSERT INTO `wms_item_sku` VALUES (1828402624005312516, '粉', 1828402622516334594, '', '00003', NULL, NULL, NULL, NULL, NULL, 5000.00, 5288.00, 'admin', '2024-08-27 20:02:10.305', 'admin', '2024-09-02 21:45:27.190');
-INSERT INTO `wms_item_sku` VALUES (1828406451399987201, 'pro', 1828406450112335874, '', 'mac0001', NULL, NULL, NULL, NULL, NULL, NULL, 24999.00, 'admin', '2024-08-27 20:17:22.821', 'admin', '2024-08-27 20:17:22.821');
-INSERT INTO `wms_item_sku` VALUES (1828407871469686786, 'l6468', 1828407870173646849, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3188.00, 'admin', '2024-08-27 20:23:01.393', 'admin', '2024-08-27 20:23:01.393');
-INSERT INTO `wms_item_sku` VALUES (1828408321522700289, '白色', 1828408320146968578, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2699.00, 'admin', '2024-08-27 20:24:48.697', 'admin', '2024-08-27 20:24:48.697');
-INSERT INTO `wms_item_sku` VALUES (1828408796968030210, '10kg', 1828408795734904833, '102025115', NULL, NULL, NULL, NULL, NULL, 10.000, NULL, NULL, 'admin', '2024-08-27 20:26:42.049', 'admin', '2024-08-27 20:33:27.395');
-INSERT INTO `wms_item_sku` VALUES (1828408796968030211, '20kg', 1828408795734904833, '254523055', NULL, NULL, NULL, NULL, NULL, 20.000, NULL, NULL, 'admin', '2024-08-27 20:26:42.052', 'admin', '2024-08-27 20:33:27.515');
-INSERT INTO `wms_item_sku` VALUES (1828408796968030212, '50kg', 1828408795734904833, '5204862525', NULL, NULL, NULL, NULL, NULL, 50.000, NULL, NULL, 'admin', '2024-08-27 20:26:42.052', 'admin', '2024-08-27 20:33:27.634');
-INSERT INTO `wms_item_sku` VALUES (1829398193024724993, '大', 1829398192563351554, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2024-08-30 13:58:12.457', 'admin', '2024-08-30 14:01:08.172');
-INSERT INTO `wms_item_sku` VALUES (1829398193024724994, '中', 1829398192563351554, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2024-08-30 13:58:12.458', 'admin', '2024-08-30 14:01:08.328');
-INSERT INTO `wms_item_sku` VALUES (1829398333903007745, '大', 1829398333580046338, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2024-08-30 13:58:46.047', 'admin', '2024-08-30 14:00:49.854');
-INSERT INTO `wms_item_sku` VALUES (1829398333903007746, '中', 1829398333580046338, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2024-08-30 13:58:46.048', 'admin', '2024-08-30 14:00:50.001');
-INSERT INTO `wms_item_sku` VALUES (1829398492779048962, '大', 1829398492388978689, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2024-08-30 13:59:23.925', 'admin', '2024-08-30 14:00:32.544');
-INSERT INTO `wms_item_sku` VALUES (1829398492779048963, '中', 1829398492388978689, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2024-08-30 13:59:23.925', 'admin', '2024-08-30 14:00:32.683');
-INSERT INTO `wms_item_sku` VALUES (1829398702011904001, '大', 1829398701680553985, '', NULL, 10.0, 10.0, 10.0, NULL, NULL, NULL, NULL, 'admin', '2024-08-30 14:00:13.810', 'admin', '2024-08-30 14:00:13.810');
-INSERT INTO `wms_item_sku` VALUES (1829398702011904002, '中', 1829398701680553985, '', NULL, 5.0, 5.0, 5.0, NULL, NULL, NULL, NULL, 'admin', '2024-08-30 14:00:13.812', 'admin', '2024-08-30 14:00:13.812');
-INSERT INTO `wms_item_sku` VALUES (1829399118304964609, '大', 1829399118040723457, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2024-08-30 14:01:53.064', 'admin', '2024-08-30 14:01:53.064');
-INSERT INTO `wms_item_sku` VALUES (1829399118304964610, '中', 1829399118040723457, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2024-08-30 14:01:53.064', 'admin', '2024-08-30 14:01:53.064');
-INSERT INTO `wms_item_sku` VALUES (1840282974629265410, '1P', 1840282974297915394, '', NULL, NULL, NULL, NULL, NULL, NULL, 2000.00, NULL, 'wms2_admin', '2024-09-29 14:50:26.627', 'wms2_admin', '2024-09-29 14:50:26.627');
-INSERT INTO `wms_item_sku` VALUES (1840282974696374273, '2P', 1840282974297915394, '', NULL, NULL, NULL, NULL, NULL, NULL, 3000.00, NULL, 'wms2_admin', '2024-09-29 14:50:26.628', 'wms2_admin', '2024-09-29 14:50:26.628');
+INSERT INTO `wms_item_sku` VALUES (1828402624005312514, '明前特级 250g', 1828402622516334594, '6930000000001', 'LJ-250-S', NULL, NULL, NULL, NULL, 0.250, 580.00, 680.00, 'admin', '2024-08-27 20:02:10.302', 'admin', '2024-09-02 21:45:27.177');
+INSERT INTO `wms_item_sku` VALUES (1828406451399987201, '浓香型 250g', 1828406450112335874, '6930000000002', 'TGY-250-A', NULL, NULL, NULL, NULL, 0.250, 260.00, 328.00, 'admin', '2024-08-27 20:17:22.821', 'admin', '2024-08-27 20:17:22.821');
+INSERT INTO `wms_item_sku` VALUES (1829398702011904001, '桐木关 特级 125g', 1829398701680553985, '6930000000003', 'JJM-125-S', NULL, NULL, NULL, NULL, 0.125, 420.00, 528.00, 'admin', '2024-08-30 14:00:13.810', 'admin', '2024-08-30 14:00:13.810');
+INSERT INTO `wms_item_sku` VALUES (1840282974629265410, '白牡丹 一级 350g', 1840282974297915394, '6930000000004', 'BMD-350-A', NULL, NULL, NULL, NULL, 0.350, 188.00, 258.00, 'admin', '2024-09-29 14:50:26.627', 'admin', '2024-09-29 14:50:26.627');
+INSERT INTO `wms_item_sku` VALUES (1840282974696374273, '白牡丹 特级 500g', 1840282974297915394, '6930000000005', 'BMD-500-S', NULL, NULL, NULL, NULL, 0.500, 268.00, 358.00, 'admin', '2024-09-29 14:50:26.628', 'admin', '2024-09-29 14:50:26.628');
 
 -- ----------------------------
 -- Table structure for wms_merchant
@@ -929,14 +938,14 @@ CREATE TABLE `wms_merchant`  (
   `update_by` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '修改人',
   `update_time` datetime(3) NULL DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1828354284882399234 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '往来单位' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1828354284882399234 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '茶企往来单位' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of wms_merchant
 -- ----------------------------
-INSERT INTO `wms_merchant` VALUES (1828354016258199554, 'c_0001', '苏州XXXXXXX仓储管理有限公司', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2024-08-27 16:49:01.319', 'admin', '2024-08-27 16:49:01.319');
-INSERT INTO `wms_merchant` VALUES (1828354153193836545, 's_0001', '苏州XXXXX供应链有限公司', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2024-08-27 16:49:33.964', 'admin', '2024-08-27 16:49:33.964');
-INSERT INTO `wms_merchant` VALUES (1828354284882399233, 'c_s_0001', '苏州CS有限公司', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2024-08-27 16:50:05.367', 'admin', '2024-08-27 16:50:05.367');
+INSERT INTO `wms_merchant` VALUES (1828354016258199554, 'buyer_001', '杭州国茶商贸有限公司', 1, 'A', '中国银行杭州西湖支行', '622200000000000001', '浙江省杭州市西湖区龙井路88号', '13888880001', '0571-88880001', '王雨桐', 'buyer@guochatea.cn', '核心采购方', 'admin', '2024-08-27 16:49:01.319', 'admin', '2024-08-27 16:49:01.319');
+INSERT INTO `wms_merchant` VALUES (1828354153193836545, 'supplier_001', '福建武夷山岩茶股份有限公司', 2, 'S', '中国工商银行武夷山支行', '622200000000000002', '福建省南平市武夷山市度假区1号', '13888880002', '0599-88880002', '陈建华', 'supplier@wuyitea.cn', '武夷岩茶供应商', 'admin', '2024-08-27 16:49:33.964', 'admin', '2024-08-27 16:49:33.964');
+INSERT INTO `wms_merchant` VALUES (1828354284882399233, 'dealer_001', '北京华茗茶业连锁有限公司', 3, 'A', '中国建设银行北京朝阳支行', '622200000000000003', '北京市朝阳区建国路86号', '13888880003', '010-88880003', '刘子墨', 'dealer@huamingtea.cn', '全国经销合作方', 'admin', '2024-08-27 16:50:05.367', 'admin', '2024-08-27 16:50:05.367');
 
 -- ----------------------------
 -- Table structure for wms_movement_order
@@ -961,7 +970,7 @@ CREATE TABLE `wms_movement_order`  (
 -- ----------------------------
 -- Records of wms_movement_order
 -- ----------------------------
-INSERT INTO `wms_movement_order` VALUES (1843920257199722498, 'YK10096786', 1828364609002311682, 1840317750635581441, 1, NULL, 1.00, NULL, 'ck', '2024-10-09 15:43:42.356', 'ck', '2024-10-09 15:43:42.356');
+INSERT INTO `wms_movement_order` VALUES (1843920257199722498, 'TR24050967', 1828364609002311682, 1840317750635581441, 1, NULL, 36.00, '华东主仓调拨到华北成品仓', 'admin', '2024-10-09 15:43:42.356', 'admin', '2024-10-09 15:43:42.356');
 
 -- ----------------------------
 -- Table structure for wms_movement_order_detail
@@ -986,7 +995,7 @@ CREATE TABLE `wms_movement_order_detail`  (
 -- ----------------------------
 -- Records of wms_movement_order_detail
 -- ----------------------------
-INSERT INTO `wms_movement_order_detail` VALUES (1843920257237471233, 1843920257199722498, 1840282974696374273, 1.00, NULL, NULL, 1828364609002311682, 1840317750635581441, 'ck', '2024-10-09 15:43:42.365', 'ck', '2024-10-09 15:43:42.365');
+INSERT INTO `wms_movement_order_detail` VALUES (1843920257237471233, 1843920257199722498, 1840282974696374273, 36.00, NULL, '白牡丹特级调拨', 1828364609002311682, 1840317750635581441, 'admin', '2024-10-09 15:43:42.365', 'admin', '2024-10-09 15:43:42.365');
 
 -- ----------------------------
 -- Table structure for wms_receipt_order
@@ -1013,7 +1022,7 @@ CREATE TABLE `wms_receipt_order`  (
 -- ----------------------------
 -- Records of wms_receipt_order
 -- ----------------------------
-INSERT INTO `wms_receipt_order` VALUES (1843920012030070785, 'RK10098845', 2, NULL, NULL, 8.00, NULL, 1, 1828364609002311682, NULL, 'ck', '2024-10-09 15:42:43.905', 'ck', '2024-10-09 15:42:43.905');
+INSERT INTO `wms_receipt_order` VALUES (1843920012030070785, 'RC24050988', 1, 1828354153193836545, 'PO-20241009001', 200.00, 47200.00, 1, 1828364609002311682, '福建春茶采购入仓', 'admin', '2024-10-09 15:42:43.905', 'admin', '2024-10-09 15:42:43.905');
 
 -- ----------------------------
 -- Table structure for wms_receipt_order_detail
@@ -1037,8 +1046,8 @@ CREATE TABLE `wms_receipt_order_detail`  (
 -- ----------------------------
 -- Records of wms_receipt_order_detail
 -- ----------------------------
-INSERT INTO `wms_receipt_order_detail` VALUES (1843920012088791042, 1843920012030070785, 1840282974696374273, 4.00, 4000.00, 1828364609002311682, NULL, 'ck', '2024-10-09 15:42:43.920', 'ck', '2024-10-09 15:42:43.920');
-INSERT INTO `wms_receipt_order_detail` VALUES (1843920012105568258, 1843920012030070785, 1840282974629265410, 4.00, 4000.00, 1828364609002311682, NULL, 'ck', '2024-10-09 15:42:43.922', 'ck', '2024-10-09 15:42:43.922');
+INSERT INTO `wms_receipt_order_detail` VALUES (1843920012088791042, 1843920012030070785, 1840282974696374273, 120.00, 32160.00, 1828364609002311682, '白牡丹特级入仓', 'admin', '2024-10-09 15:42:43.920', 'admin', '2024-10-09 15:42:43.920');
+INSERT INTO `wms_receipt_order_detail` VALUES (1843920012105568258, 1843920012030070785, 1840282974629265410, 80.00, 15040.00, 1828364609002311682, '白牡丹一级入仓', 'admin', '2024-10-09 15:42:43.922', 'admin', '2024-10-09 15:42:43.922');
 
 -- ----------------------------
 -- Table structure for wms_shipment_order
@@ -1065,7 +1074,7 @@ CREATE TABLE `wms_shipment_order`  (
 -- ----------------------------
 -- Records of wms_shipment_order
 -- ----------------------------
-INSERT INTO `wms_shipment_order` VALUES (1843920133316759553, 'CK10094547', 2, NULL, NULL, NULL, 1.00, 1, 1828364609002311682, NULL, 'ck', '2024-10-09 15:43:12.821', 'ck', '2024-10-09 15:43:12.821');
+INSERT INTO `wms_shipment_order` VALUES (1843920133316759553, 'SC24050945', 1, 'SO-20241009001', 1828354284882399233, 5160.00, 20.00, 1, 1828364609002311682, '华北渠道补货', 'admin', '2024-10-09 15:43:12.821', 'admin', '2024-10-09 15:43:12.821');
 
 -- ----------------------------
 -- Table structure for wms_shipment_order_detail
@@ -1089,7 +1098,7 @@ CREATE TABLE `wms_shipment_order_detail`  (
 -- ----------------------------
 -- Records of wms_shipment_order_detail
 -- ----------------------------
-INSERT INTO `wms_shipment_order_detail` VALUES (1843920133354508289, 1843920133316759553, 1828364609002311682, 1840282974629265410, 1.00, NULL, NULL, 'ck', '2024-10-09 15:43:12.830', 'ck', '2024-10-09 15:43:12.830');
+INSERT INTO `wms_shipment_order_detail` VALUES (1843920133354508289, 1843920133316759553, 1828364609002311682, 1840282974629265410, 20.00, 5160.00, '白牡丹一级发运', 'admin', '2024-10-09 15:43:12.830', 'admin', '2024-10-09 15:43:12.830');
 
 -- ----------------------------
 -- Table structure for wms_warehouse
@@ -1111,8 +1120,8 @@ CREATE TABLE `wms_warehouse`  (
 -- ----------------------------
 -- Records of wms_warehouse
 -- ----------------------------
-INSERT INTO `wms_warehouse` VALUES (1828364609002311682, NULL, '苏州园区', NULL, 1, 'admin', '2024-08-27 17:31:06.821', 'admin', '2024-08-27 17:31:06.821');
-INSERT INTO `wms_warehouse` VALUES (1828364740028174337, NULL, '常熟冷链仓', NULL, 2, 'admin', '2024-08-27 17:31:38.066', 'admin', '2024-08-30 13:55:34.766');
-INSERT INTO `wms_warehouse` VALUES (1840317750635581441, NULL, '吴江仓', NULL, 3, 'wms2_admin', '2024-09-29 17:08:37.859', 'wms2_admin', '2024-09-29 17:08:37.859');
+INSERT INTO `wms_warehouse` VALUES (1828364609002311682, 'HZ-MAIN', '杭州龙井主仓', '浙江茶区成品主仓', 1, 'admin', '2024-08-27 17:31:06.821', 'admin', '2024-08-27 17:31:06.821');
+INSERT INTO `wms_warehouse` VALUES (1828364740028174337, 'FJ-QA', '福鼎白茶审评仓', '审评与抽检仓', 2, 'admin', '2024-08-27 17:31:38.066', 'admin', '2024-08-30 13:55:34.766');
+INSERT INTO `wms_warehouse` VALUES (1840317750635581441, 'BJ-FIN', '北京渠道成品仓', '华北经销中转仓', 3, 'admin', '2024-09-29 17:08:37.859', 'admin', '2024-09-29 17:08:37.859');
 
 SET FOREIGN_KEY_CHECKS = 1;

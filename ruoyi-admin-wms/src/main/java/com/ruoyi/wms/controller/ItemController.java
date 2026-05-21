@@ -31,7 +31,7 @@ public class ItemController extends BaseController {
     private final ItemService itemService;
 
     /**
-     * 查询物料列表
+     * 查询茶品列表
      */
     @GetMapping("/list")
     @SaCheckPermission("wms:item:list")
@@ -40,7 +40,7 @@ public class ItemController extends BaseController {
     }
 
     /**
-     * 查询物料列表
+     * 查询茶品列表
      */
     @GetMapping("/listNoPage")
     @SaCheckPermission("wms:item:list")
@@ -49,18 +49,18 @@ public class ItemController extends BaseController {
     }
 
     /**
-     * 导出物料列表
+     * 导出茶品列表
      */
-    @Log(title = "物料", businessType = BusinessType.EXPORT)
+    @Log(title = "茶品", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
     @SaCheckPermission("wms:item:list")
     public void export(ItemBo bo, HttpServletResponse response) {
         List<ItemVo> list = itemService.queryList(bo);
-        ExcelUtil.exportExcel(list, "物料", ItemVo.class, response);
+        ExcelUtil.exportExcel(list, "茶品", ItemVo.class, response);
     }
 
     /**
-     * 获取物料详细信息
+     * 获取茶品详细信息
      *
      * @param id 主键
      */
@@ -72,9 +72,9 @@ public class ItemController extends BaseController {
     }
 
     /**
-     * 新增物料
+     * 新增茶品
      */
-    @Log(title = "物料", businessType = BusinessType.INSERT)
+    @Log(title = "茶品", businessType = BusinessType.INSERT)
     @RepeatSubmit()
     @PostMapping()
     @SaCheckPermission("wms:item:edit")
@@ -83,9 +83,9 @@ public class ItemController extends BaseController {
         return R.ok();
     }
     /**
-     * 修改物料
+     * 修改茶品
      */
-    @Log(title = "物料", businessType = BusinessType.UPDATE)
+    @Log(title = "茶品", businessType = BusinessType.UPDATE)
     @RepeatSubmit()
     @PutMapping()
     @SaCheckPermission("wms:item:edit")
@@ -95,11 +95,11 @@ public class ItemController extends BaseController {
     }
 
     /**
-     * 删除物料
+     * 删除茶品
      *
      * @param id 主键
      */
-    @Log(title = "物料", businessType = BusinessType.DELETE)
+    @Log(title = "茶品", businessType = BusinessType.DELETE)
     @DeleteMapping("/{id}")
     @SaCheckPermission("wms:item:edit")
     public R<Void> remove(@NotNull(message = "主键不能为空")

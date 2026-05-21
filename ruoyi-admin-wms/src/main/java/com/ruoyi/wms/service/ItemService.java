@@ -101,6 +101,9 @@ public class ItemService {
             lqw.in(Item::getItemCategory, subIdList);
         }
         lqw.eq(StrUtil.isNotBlank(bo.getUnit()), Item::getUnit, bo.getUnit());
+        lqw.eq(StrUtil.isNotBlank(bo.getTeaType()), Item::getTeaType, bo.getTeaType());
+        lqw.eq(StrUtil.isNotBlank(bo.getTeaLevel()), Item::getTeaLevel, bo.getTeaLevel());
+        lqw.like(StrUtil.isNotBlank(bo.getTeaOrigin()), Item::getTeaOrigin, bo.getTeaOrigin());
         return lqw;
     }
 
@@ -149,13 +152,13 @@ public class ItemService {
         LambdaQueryWrapper<Item> queryWrapper = Wrappers.lambdaQuery();
         queryWrapper.eq(Item::getItemName, item.getItemName());
         queryWrapper.ne(item.getId() != null, Item::getId, item.getId());
-        Assert.isTrue(itemMapper.selectCount(queryWrapper) == 0, "商品名称重复");
+        Assert.isTrue(itemMapper.selectCount(queryWrapper) == 0, "茶品名称重复");
     }
 
     private void validateItemSkuName(List<ItemSkuBo> skuVoList) {
          Assert.isTrue(
              skuVoList.stream().map(ItemSkuBo::getSkuName).distinct().count() == skuVoList.size(),
-             "商品规格重复"
+             "茶品规格重复"
          );
     }
 

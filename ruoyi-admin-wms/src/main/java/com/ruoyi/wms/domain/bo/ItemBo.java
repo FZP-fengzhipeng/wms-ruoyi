@@ -46,7 +46,7 @@ public class ItemBo extends BaseEntity {
     private String itemCategory;
 
     /**
-     * 单位类别
+     * 计量单位
      */
     private String unit;
 
@@ -54,6 +54,26 @@ public class ItemBo extends BaseEntity {
      * 品牌
      */
     private Long itemBrand;
+
+    /**
+     * 茶类
+     */
+    private String teaType;
+
+    /**
+     * 产区
+     */
+    private String teaOrigin;
+
+    /**
+     * 等级
+     */
+    private String teaLevel;
+
+    /**
+     * 采摘季
+     */
+    private String harvestSeason;
 
 
     /**

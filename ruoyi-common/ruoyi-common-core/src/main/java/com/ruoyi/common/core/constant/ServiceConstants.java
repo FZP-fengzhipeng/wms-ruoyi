@@ -2,7 +2,7 @@ package com.ruoyi.common.core.constant;
 
 public class ServiceConstants {
     /**
-     * 入库单状态
+     * 采购入仓单状态
      */
     public class ReceiptOrderStatus {
         public static final Integer INVALID = -1;
@@ -11,7 +11,7 @@ public class ServiceConstants {
     }
 
     /**
-     * 出库单状态
+     * 销售出仓单状态
      */
     public class ShipmentOrderStatus {
         public static final Integer INVALID = -1;
@@ -20,7 +20,7 @@ public class ServiceConstants {
     }
 
     /**
-     * 库存记录操作类型
+     * 茶仓库存记录操作类型
      */
     public class InventoryHistoryOrderType {
         public static final Integer RECEIPT = 1;
@@ -30,7 +30,7 @@ public class ServiceConstants {
     }
 
     /**
-     * 移库单状态
+     * 调拨单状态
      */
     public class MovementOrderStatus {
         public static final Integer INVALID = -1;
@@ -39,7 +39,7 @@ public class ServiceConstants {
     }
 
     /**
-     * 盘库单状态
+     * 盘点单状态
      */
     public class CheckOrderStatus {
         public static final Integer INVALID = -1;
