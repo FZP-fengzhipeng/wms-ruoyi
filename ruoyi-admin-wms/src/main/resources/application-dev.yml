@@ -130,3 +130,12 @@ sms:
     sdkAppId: appid
     #地域信息默认为 ap-guangzhou 如无特殊改变可不用设置
     territory: ap-guangzhou
+
+--- # 茶仓智能查询助手（DeepSeek，仅查询）
+tea:
+  agent:
+    deepseek:
+      enabled: true
+      api-key: ${DEEPSEEK_API_KEY:}
+      base-url: https://api.deepseek.com
+      model: deepseek-chat
