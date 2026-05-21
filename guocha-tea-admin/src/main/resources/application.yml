@@ -1,7 +1,7 @@
 # 项目相关配置
 ruoyi:
   # 名称
-  name: ruoyi-wms-service
+  name: guocha-tea-service
   # 版本
   version: ${revision}
   # 版权年份

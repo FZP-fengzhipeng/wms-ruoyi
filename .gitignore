@@ -47,3 +47,7 @@ nbdist/
 application-local.yml
 application-prod.yml
 .flattened-pom.xml
+
+# 误生成的 Maven 本地路径目录
+D*/
+D：/
