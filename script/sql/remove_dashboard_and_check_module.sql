@@ -1,6 +1,6 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-USE `ry-vue`;
+USE `ry_tea`;
 
 -- 1) 移除茶仓盘点菜单权限
 DELETE FROM `sys_role_menu`

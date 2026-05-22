@@ -1,5 +1,5 @@
 SET NAMES utf8mb4;
-USE `ry-vue`;
+USE `ry_tea`;
 
 -- 用户资料茶叶化
 UPDATE `sys_user`

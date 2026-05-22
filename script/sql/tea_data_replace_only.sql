@@ -1,7 +1,7 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
-USE `ry-vue`;
+USE `ry_tea`;
 
 -- 首次执行脚本：补齐茶叶字段（再次执行可能因重复列报错）
 ALTER TABLE `wms_item` ADD COLUMN `tea_type` varchar(20) NULL COMMENT '茶类';

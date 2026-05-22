@@ -5,8 +5,8 @@
 1. 创建数据库并切换：
 
 ```sql
-CREATE DATABASE IF NOT EXISTS `ry-vue` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `ry-vue`;
+CREATE DATABASE IF NOT EXISTS `ry_tea` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `ry_tea`;
 ```
 
 2. 执行脚本：

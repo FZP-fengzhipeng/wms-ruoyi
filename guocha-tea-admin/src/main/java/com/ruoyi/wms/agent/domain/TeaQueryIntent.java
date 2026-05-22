@@ -7,8 +7,11 @@ public class TeaQueryIntent {
 
     private TeaAgentModule module = TeaAgentModule.UNKNOWN;
 
-    /** LIST | DETAIL | SUMMARY | OVERVIEW */
+    /** LIST | DETAIL | SUMMARY | OVERVIEW | RECALL | UNMATCHED */
     private String action = "LIST";
+
+    /** 茶品名称关键词（查库存/茶仓） */
+    private String itemKeyword;
 
     private String orderNo;
 

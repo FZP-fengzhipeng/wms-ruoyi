@@ -4,6 +4,7 @@ public enum TeaAgentModule {
     RECEIPT,
     SHIPMENT,
     MOVEMENT,
+    INVENTORY,
     OVERVIEW,
     UNKNOWN
 }

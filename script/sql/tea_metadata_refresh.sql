@@ -1,5 +1,5 @@
 SET NAMES utf8mb4;
-USE `ry-vue`;
+USE `ry_tea`;
 
 UPDATE `sys_dict_type` SET `dict_name` = '茶企角色类型', `remark`='茶企角色类型' WHERE `dict_type`='merchant_type';
 UPDATE `sys_dict_type` SET `dict_name` = '采购入仓状态' WHERE `dict_type`='wms_receipt_status';
@@ -27,13 +27,11 @@ INSERT INTO `sys_dict_data` (`dict_code`,`dict_sort`,`dict_label`,`dict_value`,`
 (1825000000000000003,2,'经销方','3','merchant_type',NULL,'default','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000010,0,'待入仓','0','wms_receipt_status',NULL,'info','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000011,1,'已入仓','1','wms_receipt_status',NULL,'primary','N','1','admin',NOW(),'',NULL,NULL),
-(1825000000000000012,2,'作废','-1','wms_receipt_status',NULL,'danger','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000020,0,'春茶采购入仓','1','wms_receipt_type',NULL,'primary','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000021,1,'秋茶采购入仓','2','wms_receipt_type',NULL,'primary','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000022,2,'退货回仓','3','wms_receipt_type',NULL,'warning','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000030,0,'待出仓','0','wms_shipment_status',NULL,'info','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000031,1,'已出仓','1','wms_shipment_status',NULL,'primary','N','1','admin',NOW(),'',NULL,NULL),
-(1825000000000000032,2,'作废','-1','wms_shipment_status',NULL,'danger','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000040,0,'渠道销售出仓','1','wms_shipment_type',NULL,'primary','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000041,1,'电商零售出仓','2','wms_shipment_type',NULL,'primary','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000042,2,'样品出仓','3','wms_shipment_type',NULL,'warning','N','1','admin',NOW(),'',NULL,NULL),
@@ -43,7 +41,6 @@ INSERT INTO `sys_dict_data` (`dict_code`,`dict_sort`,`dict_label`,`dict_value`,`
 (1825000000000000053,3,'盘点','4','wms_inventory_history_type',NULL,'primary','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000060,0,'待调拨','0','wms_movement_status',NULL,'info','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000061,1,'已调拨','1','wms_movement_status',NULL,'primary','N','1','admin',NOW(),'',NULL,NULL),
-(1825000000000000062,2,'作废','-1','wms_movement_status',NULL,'danger','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000070,0,'待盘点','0','wms_check_status',NULL,'info','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000071,1,'已盘点','1','wms_check_status',NULL,'primary','N','1','admin',NOW(),'',NULL,NULL),
 (1825000000000000072,2,'作废','-1','wms_check_status',NULL,'danger','N','1','admin',NOW(),'',NULL,NULL),

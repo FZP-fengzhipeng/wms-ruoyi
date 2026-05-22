@@ -1,5 +1,5 @@
 SET NAMES utf8mb4;
-USE `ry-vue`;
+USE `ry_tea`;
 
 -- 茶仓智能查询助手菜单（位于茶企档案之前，order_num=9）
 INSERT INTO `sys_menu` (`menu_id`, `menu_name`, `parent_id`, `order_num`, `path`, `component`, `query_param`, `is_frame`, `is_cache`, `menu_type`, `visible`, `status`, `perms`, `icon`, `create_by`, `create_time`, `update_by`, `update_time`, `remark`)

@@ -7,6 +7,8 @@ import com.ruoyi.common.mybatis.core.page.TableDataInfo;
 import com.ruoyi.wms.agent.domain.TeaAgentModule;
 import com.ruoyi.wms.agent.domain.TeaQueryIntent;
 import com.ruoyi.wms.agent.domain.TeaQueryResult;
+import com.ruoyi.wms.domain.bo.InventoryBo;
+import com.ruoyi.wms.domain.bo.ItemBo;
 import com.ruoyi.wms.domain.bo.MerchantBo;
 import com.ruoyi.wms.domain.bo.MovementOrderBo;
 import com.ruoyi.wms.domain.bo.ReceiptOrderBo;
@@ -15,6 +17,9 @@ import com.ruoyi.wms.domain.bo.WarehouseBo;
 import com.ruoyi.wms.domain.entity.MovementOrder;
 import com.ruoyi.wms.domain.vo.*;
 import com.ruoyi.wms.mapper.MovementOrderMapper;
+import com.ruoyi.wms.service.InventoryService;
+import com.ruoyi.wms.service.ItemService;
+import com.ruoyi.wms.service.ItemSkuService;
 import com.ruoyi.wms.service.MerchantService;
 import com.ruoyi.wms.service.MovementOrderService;
 import com.ruoyi.wms.service.ReceiptOrderService;
@@ -36,18 +41,93 @@ public class TeaWmsQueryExecutor {
     private final MovementOrderMapper movementOrderMapper;
     private final MerchantService merchantService;
     private final WarehouseService warehouseService;
+    private final ItemService itemService;
+    private final ItemSkuService itemSkuService;
+    private final InventoryService inventoryService;
 
     public TeaQueryResult execute(TeaQueryIntent intent) {
         if ("RECALL".equals(intent.getAction())) {
             return recallFromSession(intent);
         }
+        if ("UNMATCHED".equals(intent.getAction())) {
+            return queryUnmatched(intent);
+        }
         return switch (intent.getModule()) {
             case RECEIPT -> queryReceipt(intent);
             case SHIPMENT -> queryShipment(intent);
             case MOVEMENT -> queryMovement(intent);
+            case INVENTORY -> queryInventory(intent);
             case OVERVIEW -> queryOverview(intent);
-            default -> queryOverview(intent);
+            default -> queryUnmatched(intent);
         };
+    }
+
+    private TeaQueryResult queryUnmatched(TeaQueryIntent intent) {
+        TeaQueryResult result = new TeaQueryResult();
+        result.setModuleLabel("查询提示");
+        result.setPrefillBriefSummary(false);
+        result.setBriefSummary("暂无法根据您的问题直接查询到结果。您可以尝试：\n"
+            + "1. 输入单号，如：单号 CR05216556\n"
+            + "2. 问三个模块待处理数量，如：三个模块各有多少待处理单据？\n"
+            + "3. 问茶品在哪个茶仓，如：白牡丹在哪个茶仓有库存？");
+        result.setDataContext(result.getBriefSummary());
+        result.getNavigateHints().add("茶仓库存 → /teaInventory/inventory");
+        return result;
+    }
+
+    private TeaQueryResult queryInventory(TeaQueryIntent intent) {
+        TeaQueryResult result = new TeaQueryResult();
+        result.setModuleLabel("茶仓库存");
+        if (intent.getItemKeyword() == null) {
+            result.setBriefSummary("请说明要查询的茶品名称，例如：白牡丹在哪个茶仓有库存？");
+            result.setDataContext(result.getBriefSummary());
+            return result;
+        }
+        ItemBo itemBo = new ItemBo();
+        itemBo.setItemName(intent.getItemKeyword());
+        List<ItemVo> items = itemService.queryList(itemBo);
+        if (items.isEmpty()) {
+            result.setBriefSummary("未找到名称包含「" + intent.getItemKeyword() + "」的茶品。");
+            result.setDataContext(result.getBriefSummary());
+            return result;
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append("茶品「").append(intent.getItemKeyword()).append("」库存分布：\n");
+        boolean hasStock = false;
+        for (ItemVo item : items) {
+            for (ItemSkuVo sku : itemSkuService.queryByItemId(item.getId())) {
+                InventoryBo invBo = new InventoryBo();
+                invBo.setSkuId(sku.getId());
+                for (InventoryVo inv : inventoryService.queryList(invBo)) {
+                    if (inv.getQuantity() == null || inv.getQuantity().signum() <= 0) {
+                        continue;
+                    }
+                    hasStock = true;
+                    String whName = resolveWarehouseName(inv.getWarehouseId());
+                    sb.append("- ").append(item.getItemName())
+                        .append(" / ").append(sku.getSkuName() != null ? sku.getSkuName() : "规格")
+                        .append(" | 茶仓:").append(whName)
+                        .append(" | 数量:").append(inv.getQuantity()).append("\n");
+                }
+            }
+        }
+        if (!hasStock) {
+            result.setBriefSummary("茶品「" + intent.getItemKeyword() + "」当前无库存记录。");
+            result.setDataContext(sb.append("（无库存）").toString());
+        } else {
+            result.setBriefSummary("已查询茶品「" + intent.getItemKeyword() + "」在各茶仓的库存。");
+            result.setDataContext(sb.toString());
+        }
+        result.getNavigateHints().add("茶仓库存 → /teaInventory/inventory");
+        return result;
+    }
+
+    private String resolveWarehouseName(Long warehouseId) {
+        if (warehouseId == null) {
+            return "未知茶仓";
+        }
+        WarehouseVo wh = warehouseService.queryById(warehouseId);
+        return wh != null && wh.getWarehouseName() != null ? wh.getWarehouseName() : String.valueOf(warehouseId);
     }
 
     private TeaQueryResult recallFromSession(TeaQueryIntent intent) {

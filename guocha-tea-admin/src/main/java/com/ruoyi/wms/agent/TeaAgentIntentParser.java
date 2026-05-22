@@ -67,7 +67,7 @@ public class TeaAgentIntentParser {
             return intent;
         }
 
-        if (text.contains("待处理") || text.contains("概览") || text.contains("三个模块") || text.contains("分别多少")) {
+        if (isExplicitOverviewQuestion(text)) {
             intent.setModule(TeaAgentModule.OVERVIEW);
             intent.setAction("OVERVIEW");
             return intent;
@@ -97,6 +97,7 @@ public class TeaAgentIntentParser {
 
         extractMerchantKeyword(text, intent);
         extractWarehouseKeyword(text, intent);
+        extractItemKeyword(text, intent);
 
         if (intent.getModule() == TeaAgentModule.UNKNOWN) {
             if (text.contains("待入仓")) {
@@ -109,12 +110,27 @@ public class TeaAgentIntentParser {
                 intent.setOrderNo(session.getLastOrderNo());
                 intent.setModule(session.getLastModule());
                 intent.setAction("DETAIL");
-            } else {
+            } else if (intent.getItemKeyword() != null || isInventoryQuestion(text)) {
+                intent.setModule(TeaAgentModule.INVENTORY);
+                intent.setAction("LIST");
+            } else if (isExplicitOverviewQuestion(text)) {
                 intent.setModule(TeaAgentModule.OVERVIEW);
                 intent.setAction("OVERVIEW");
+            } else {
+                intent.setAction("UNMATCHED");
             }
         }
         return intent;
+    }
+
+    private boolean isExplicitOverviewQuestion(String text) {
+        return text.contains("待处理") || text.contains("概览") || text.contains("三个模块")
+            || text.contains("分别多少") || text.contains("各有多少");
+    }
+
+    private boolean isInventoryQuestion(String text) {
+        return text.contains("茶仓") || text.contains("仓库") || text.contains("库存")
+            || text.contains("源头") || text.contains("在哪");
     }
 
     private boolean isRecallQuestion(String text) {
@@ -158,10 +174,23 @@ public class TeaAgentIntentParser {
         if (text.contains("茶仓") || text.contains("仓库")) {
             for (String part : text.split("[，,。\\s]")) {
                 if (part.contains("仓") && part.length() >= 3) {
-                    intent.setWarehouseKeyword(part.replace("茶仓", "").replace("仓库", ""));
-                    break;
+                    String kw = part.replace("茶仓", "").replace("仓库", "").replace("源头", "").trim();
+                    if (kw.length() >= 2) {
+                        intent.setWarehouseKeyword(kw);
+                        break;
+                    }
                 }
             }
+        }
+    }
+
+    private void extractItemKeyword(String text, TeaQueryIntent intent) {
+        String cleaned = text
+            .replaceAll("请问|查询|一下|哪个|什么|哪里|哪儿|怎样|如何|的|源头|来源|所在|在|仓库|茶仓|库存|有多少|多少|吗|呢|？", "")
+            .trim();
+        if (cleaned.length() >= 2 && cleaned.length() <= 20 && !cleaned.contains("入仓")
+            && !cleaned.contains("出仓") && !cleaned.contains("调拨")) {
+            intent.setItemKeyword(cleaned);
         }
     }
 }
