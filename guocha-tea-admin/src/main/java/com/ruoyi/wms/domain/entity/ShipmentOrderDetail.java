@@ -19,4 +19,7 @@ public class ShipmentOrderDetail extends BaseOrderDetail {
      * 所属仓库
      */
     private Long warehouseId;
+
+    private String batchNo;
+    private Long sourceReceiptDetailId;
 }

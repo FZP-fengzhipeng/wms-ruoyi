@@ -18,5 +18,11 @@ import lombok.EqualsAndHashCode;
 @AutoMapper(target = ShipmentOrderDetail.class)
 public class ShipmentOrderDetailVo extends BaseOrderDetailVo{
 
-
+    private String batchNo;
+    private Long sourceReceiptDetailId;
+    /** 溯源：来源入仓单号 */
+    private String sourceReceiptOrderNo;
+    private String sourceTeaOrigin;
+    private String sourceHarvestSeason;
+    private String sourceTeaType;
 }

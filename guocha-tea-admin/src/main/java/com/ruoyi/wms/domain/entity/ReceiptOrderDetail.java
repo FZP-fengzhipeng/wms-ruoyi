@@ -20,5 +20,8 @@ public class ReceiptOrderDetail extends BaseOrderDetail {
      */
     private Long warehouseId;
 
-
+    private String batchNo;
+    private String teaOrigin;
+    private String harvestSeason;
+    private String teaType;
 }

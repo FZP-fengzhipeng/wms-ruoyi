@@ -120,4 +120,14 @@ public class ReceiptOrderDetailService extends ServiceImpl<ReceiptOrderDetailMap
         itemSkuService.setItemSkuMap(details);
         return details;
     }
+
+    public void updateBatchFields(ReceiptOrderDetailVo detail) {
+        ReceiptOrderDetail entity = new ReceiptOrderDetail();
+        entity.setId(detail.getId());
+        entity.setBatchNo(detail.getBatchNo());
+        entity.setTeaOrigin(detail.getTeaOrigin());
+        entity.setHarvestSeason(detail.getHarvestSeason());
+        entity.setTeaType(detail.getTeaType());
+        receiptOrderDetailMapper.updateById(entity);
+    }
 }

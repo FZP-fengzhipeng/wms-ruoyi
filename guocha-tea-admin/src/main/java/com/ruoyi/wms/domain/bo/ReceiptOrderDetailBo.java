@@ -22,5 +22,8 @@ import lombok.EqualsAndHashCode;
 })
 public class ReceiptOrderDetailBo extends BaseOrderDetailBo {
 
-
+    private String batchNo;
+    private String teaOrigin;
+    private String harvestSeason;
+    private String teaType;
 }

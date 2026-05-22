@@ -49,6 +49,11 @@ public class InventoryVo implements Serializable {
     private BigDecimal quantity;
 
     /**
+     * 最低库存
+     */
+    private BigDecimal minQuantity;
+
+    /**
      * 备注
      */
     @ExcelProperty(value = "备注")

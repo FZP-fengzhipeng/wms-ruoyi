@@ -45,6 +45,7 @@ public class ReceiptOrderService {
     private final ReceiptOrderDetailService receiptOrderDetailService;
     private final InventoryService inventoryService;
     private final InventoryHistoryService inventoryHistoryService;
+    private final TeaBatchStockService teaBatchStockService;
 
     /**
      * 查询入库单
@@ -137,6 +138,9 @@ public class ReceiptOrderService {
 
         // 4.保存库存记录
         inventoryHistoryService.saveInventoryHistory(bo,ServiceConstants.InventoryHistoryOrderType.RECEIPT,true);
+
+        // 5.生成茶品批次库存
+        teaBatchStockService.createFromReceipt(bo);
     }
 
     private void validateBeforeReceive(ReceiptOrderBo bo) {

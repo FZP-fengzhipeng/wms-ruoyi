@@ -21,4 +21,6 @@ import lombok.EqualsAndHashCode;
 })
 public class ShipmentOrderDetailBo extends BaseOrderDetailBo{
 
+    private String batchNo;
+    private Long sourceReceiptDetailId;
 }

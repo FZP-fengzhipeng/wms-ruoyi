@@ -32,6 +32,7 @@ public class ShipmentOrderDetailService extends ServiceImpl<ShipmentOrderDetailM
 
     private final ShipmentOrderDetailMapper shipmentOrderDetailMapper;
     private final ItemSkuService itemSkuService;
+    private final TeaBatchStockService teaBatchStockService;
 
     /**
      * 查询出库单详情
@@ -104,6 +105,7 @@ public class ShipmentOrderDetailService extends ServiceImpl<ShipmentOrderDetailM
         bo.setOrderId(shipmentOrderId);
         List<ShipmentOrderDetailVo> details = queryList(bo);
         itemSkuService.setItemSkuMap(details);
+        details.forEach(teaBatchStockService::enrichTrace);
         return details;
     }
 }

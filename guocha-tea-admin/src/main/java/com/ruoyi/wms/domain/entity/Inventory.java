@@ -40,6 +40,11 @@ public class Inventory extends BaseEntity{
      * 库存
      */
     private BigDecimal quantity;
+
+    /**
+     * 最低库存
+     */
+    private BigDecimal minQuantity;
     /**
      * 备注
      */

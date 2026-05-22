@@ -50,6 +50,7 @@ public class ShipmentOrderService {
     private final ShipmentOrderDetailService shipmentOrderDetailService;
     private final InventoryService inventoryService;
     private final InventoryHistoryService inventoryHistoryService;
+    private final TeaBatchStockService teaBatchStockService;
 
     /**
      * 查询出库单
@@ -59,7 +60,9 @@ public class ShipmentOrderService {
         if (shipmentOrderVo == null) {
             throw new BaseException("出库单不存在");
         }
-        shipmentOrderVo.setDetails(shipmentOrderDetailService.queryByShipmentOrderId(shipmentOrderVo.getId()));
+        List<ShipmentOrderDetailVo> details = shipmentOrderDetailService.queryByShipmentOrderId(shipmentOrderVo.getId());
+        details.forEach(teaBatchStockService::enrichTrace);
+        shipmentOrderVo.setDetails(details);
         return shipmentOrderVo;
     }
 
@@ -168,16 +171,18 @@ public class ShipmentOrderService {
     public void shipment(ShipmentOrderBo bo) {
         // 1.校验商品明细不能为空！
         validateBeforeShipment(bo);
-        // 2. 保存入库单和入库单明细
+        // 2.扣减批次库存并回填批次号
+        teaBatchStockService.deductForShipment(bo.getDetails());
+        // 3. 保存出库单和明细
         if (Objects.isNull(bo.getId())) {
             insertByBo(bo);
         } else {
             updateByBo(bo);
         }
-        // 3.更新库存：Inventory表
+        // 4.更新库存
         inventoryService.subtract(bo.getDetails());
 
-        // 4.创建库存记录
+        // 5.创建库存记录
         inventoryHistoryService.saveInventoryHistory(bo,ServiceConstants.InventoryHistoryOrderType.SHIPMENT,false);
     }
 
@@ -185,6 +190,14 @@ public class ShipmentOrderService {
     private void validateBeforeShipment(ShipmentOrderBo bo) {
         if (CollUtil.isEmpty(bo.getDetails())) {
             throw new BaseException("商品明细不能为空！");
+        }
+        for (ShipmentOrderDetailBo detail : bo.getDetails()) {
+            if (detail.getSourceReceiptDetailId() == null) {
+                throw new BaseException("请为每条明细选择来源入仓批次");
+            }
+            if (detail.getQuantity() == null || detail.getQuantity().signum() <= 0) {
+                throw new BaseException("出库数量必须大于0");
+            }
         }
     }
 
