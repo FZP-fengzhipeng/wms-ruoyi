@@ -192,7 +192,8 @@ public class ShipmentOrderService {
             throw new BaseException("商品明细不能为空！");
         }
         for (ShipmentOrderDetailBo detail : bo.getDetails()) {
-            if (detail.getSourceReceiptDetailId() == null) {
+            if (detail.getSourceReceiptDetailId() == null
+                && teaBatchStockService.hasAvailableBatches(detail.getSkuId(), detail.getWarehouseId())) {
                 throw new BaseException("请为每条明细选择来源入仓批次");
             }
             if (detail.getQuantity() == null || detail.getQuantity().signum() <= 0) {
